@@ -1,0 +1,33 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.loginsWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    .mail {
+        .titleLogin{
+            margin-bottom: 10px;
+            font-size: 17px;
+            font-family: $font-familyRoboto;
+            font-weight: bold;
+        }
+        .login{
+            padding: 8px 20px;
+            border: 2px solid #5E3C96;
+            font-size: 15px;
+            font-family: $font-familyRoboto;
+        }
+    }
+    .btnLog{
+        padding: 7px 20px;
+        background-color: transparent;
+        border: 2px solid #5E3C96;
+        font-size: 15px;
+        font-family: $font-familyRoboto;
+        cursor: pointer;
+    }
+}
+
