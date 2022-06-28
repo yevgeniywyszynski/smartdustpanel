@@ -1,0 +1,38 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.transactionPageWrapper{
+    background-color: #fff;
+    padding: 60px;
+}
+.titleWrapper{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    border-bottom: 2px solid #000;
+    .titleData{
+        margin-right: 4px;
+        color: #000;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+}
+
+.historyWrapper{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #000;
+    .dataStyl{
+        color: #000;
+        font-size: 16px;
+    }
+    .dataStylBold {
+        color: #000;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: $font-familyRoboto;
+    }
+    .iconFinal{
+        color: #335566;;
+    }
+}

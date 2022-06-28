@@ -44,4 +44,14 @@ $font-familyRoboto: 'Roboto', sans-serif;
           font-family: $font-familyRoboto;
         }
     }
+    .btnHistory {
+        margin-top: 10px;
+        background-color: transparent;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-family: $font-familyRoboto;
+        border: 1px solid #000;
+        cursor: pointer;
+        font-size: 13px;
+    }
 }
