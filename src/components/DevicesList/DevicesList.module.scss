@@ -1,0 +1,40 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.devicesWrapper{
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    border-left: 2px solid #000;
+    .mobileIcon{
+        font-size: 25px;
+    }
+    .device{
+        display: grid;
+        grid-template-columns: 3fr 3fr 1fr;
+        margin-bottom: 20px;
+        align-items: center;
+        .mobileWrapper{
+            display: flex;
+            align-items: center;
+        }
+        .modelTitle{
+            font-family: $font-familyRoboto;
+        }
+        .seriaNumber{
+            font-family: $font-familyRoboto;
+        }
+        .btnInfo {
+            background-color: #008000;
+            border: 1px solid #5E3D97;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #fff;
+            font-family: $font-familyRoboto;
+        }
+    }
+    .device:last-child {
+        margin-bottom: 0;
+    }
+}

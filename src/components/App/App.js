@@ -6,7 +6,6 @@ import Login from '../Login/Login';
 import Panel from '../Panel/Panel';
 import Settings from '../Settings/Settings';
 import Profile from '../Profile/Profile';
-import SerwerList from '../SerwerList/SerwerList';
 
 function App() {
   return (
@@ -19,7 +18,6 @@ function App() {
             <Route path="email" element = {<Email />} />
             <Route path="panel/settings" element = {<Settings />} />
             <Route path="panel/profile" element = {<Profile />}/>
-            <Route path="panel/serwerlist" element = {<SerwerList/>} />
           </Route>
         </Routes>
       </BrowserRouter>

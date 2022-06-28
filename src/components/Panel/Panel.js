@@ -7,8 +7,6 @@ import Menu from '../Menu/Menu';
 import SerwerList from '../SerwerList/SerwerList';
 import { FaUserAlt } from 'react-icons/fa';
 
-
-
 const Panel = () => {
 
     const [showHistory, setShowHistory] = useState(false)
