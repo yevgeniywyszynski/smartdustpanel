@@ -1,0 +1,38 @@
+{
+    "current-data": [
+        {
+        "id":1,
+        "deviceModel": "Samsung S21",
+        "isActive": true
+        }
+    ],
+    
+    "historical-data": {
+        "2022-06-27": [
+            {
+                "id":1,
+                "device-model": "Samsung S21",
+                "earned": 256
+            },
+            {
+                "id":2,
+                "device-model": "Iphone X",
+                "earned": 111
+            }
+        ],
+
+        "2022-06-26": [
+            {
+                "id":1,
+                "device-model": "Samsung S21",
+                "earned": 256
+            },
+            {
+                "id":2,
+                "device-model": "Iphone X",
+                "earned": 111
+            }
+        ]
+
+    }
+}
