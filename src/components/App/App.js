@@ -16,8 +16,8 @@ function App() {
             <Route index element ={<Login />} />
             <Route path="panel" element = {<Panel/>} />
             <Route path="email" element = {<Email />} />
-            <Route path="settings" element = {<Settings />} />
-            <Route path="profile" element = {<Profile />}/> 
+            <Route path="panel/settings" element = {<Settings />} />
+            <Route path="panel/profile" element = {<Profile />}/> 
           </Route>
         </Routes>
       </BrowserRouter>

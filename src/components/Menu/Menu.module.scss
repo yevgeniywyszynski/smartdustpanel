@@ -1,0 +1,23 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.menuWrapper{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #2BC1DE;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.menu{
+    padding: 10px 30px;
+    transition: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 17px;
+    color: #000;
+}
+
+.menu:hover{
+    background-color: #2BC1DE;
+    color: #fff;
+}

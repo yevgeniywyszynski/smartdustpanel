@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import styles from '../Panel/Panel.module.scss';
 import {Link} from 'react-router-dom';
-import { FaEnvelope, FaCog } from "react-icons/fa";
+import { FaEnvelope, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
+import Menu from '../Menu/Menu';
 
 const Panel = () => {
 
@@ -18,11 +19,19 @@ const Panel = () => {
 
                 <button 
                     type="button"
-                    onClick={() => setShowSettings(showSettings)} 
-                    className={styles.btnSettings}>
-                        <FaCog className={styles.settingsIcon}/>
+                    className={styles.btnSettings} 
+                    onClick={() => setShowSettings(!showSettings)}>
+                        {showSettings ? 
+                        <FaChevronUp  className={styles.emailIcon} /> 
+                        : 
+                        <FaChevronDown className={styles.emailIcon} />} 
                 </button>
-                
+            </div>
+            
+            <div className={styles.menuWrapper}>
+                {
+                    showSettings ? <Menu /> : null
+                }
             </div>
 
             <div className={styles.amountWrapper}>

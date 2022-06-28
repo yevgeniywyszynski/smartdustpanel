@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 const Menu = () => {
     return(
         <div className={styles.menuWrapper}>
-            <Link className={styles.menu} to="settings">ustawienia</Link>
-            <Link classname={styles.menu} to="profile">mój profil</Link>
+            <Link className={styles.menu} to="settings">Ustawienia</Link>
+            <Link className={styles.menu} to="profile">Mój profil</Link>
         </div>
     )
 }
