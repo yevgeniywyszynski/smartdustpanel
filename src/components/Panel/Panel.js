@@ -17,7 +17,8 @@ const Panel = () => {
                 <Link className={styles.emailIcon} to="/email"> <FaEnvelope className={styles.emailIcon} /></Link>
 
                 <button 
-                    type="button" 
+                    type="button"
+                    onClick={() => setShowSettings(showSettings)} 
                     className={styles.btnSettings}>
                         <FaCog className={styles.settingsIcon}/>
                 </button>

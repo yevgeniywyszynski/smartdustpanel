@@ -4,6 +4,8 @@ import Email from '../Email/Email';
 import Layout from '../Layout/Layout';
 import Login from '../Login/Login';
 import Panel from '../Panel/Panel';
+import Settings from '../Settings/Settings';
+import Profile from '../Profile/Profile';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
             <Route index element ={<Login />} />
             <Route path="panel" element = {<Panel/>} />
             <Route path="email" element = {<Email />} />
+            <Route path="settings" element = {<Settings />} />
+            <Route path="profile" element = {<Profile />}/> 
           </Route>
         </Routes>
       </BrowserRouter>

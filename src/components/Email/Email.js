@@ -3,7 +3,7 @@ import styles from '../Email/Email.module.scss';
 
 const Email = () => {
     return(
-        <div classname={styles.emailWrapper}>
+        <div className={styles.emailWrapper}>
             Email
         </div>
     )
