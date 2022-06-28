@@ -17,6 +17,18 @@ const TransactionHistory = () => {
                 <FaLongArrowAltRight className={styles.iconFinal}/>
                 <p className={styles.dataStylBold}> + 50 €</p>    
             </div>
+            <div className={styles.historyWrapper}>
+                <p className={styles.dataStyl}>2022-05-10</p>
+                <p className={styles.dataStyl}> Nowy Samsung s22</p>
+                <FaLongArrowAltRight className={styles.iconFinal}/>
+                <p className={styles.dataStylBold}> + 120 €</p>    
+            </div>
+            <div className={styles.historyWrapper}>
+                <p className={styles.dataStyl}>2021-01-24</p>
+                <p className={styles.dataStyl}> Nowy serwer</p>
+                <FaLongArrowAltRight className={styles.iconFinal}/>
+                <p className={styles.dataStylBold}> + 50 €</p>    
+            </div>
         </div>
     )
 }
