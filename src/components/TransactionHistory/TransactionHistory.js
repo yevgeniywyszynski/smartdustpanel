@@ -19,7 +19,7 @@ const TransactionHistory = () => {
             </div>
             <div className={styles.historyWrapper}>
                 <p className={styles.dataStyl}>2022-05-10</p>
-                <p className={styles.dataStyl}> Nowy Samsung s22</p>
+                <p className={styles.dataStyl}> Nowy telefon</p>
                 <FaLongArrowAltRight className={styles.iconFinal}/>
                 <p className={styles.dataStylBold}> + 120 €</p>    
             </div>

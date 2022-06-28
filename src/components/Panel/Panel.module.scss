@@ -9,6 +9,11 @@ $font-familyRoboto: 'Roboto', sans-serif;
         gap: 20px;
         justify-content: flex-end;
         align-items: center;
+        .userIcon{
+            font-size: 20px;
+            margin-right: 10px;
+            color: #5E3D97;
+        }
         .nickName{
             font-family: $font-familyRoboto;
             .nickStyl{
@@ -17,8 +22,9 @@ $font-familyRoboto: 'Roboto', sans-serif;
             }
         }
         .emailIcon {
-            color: #000;
+            color: #5E3D97;
             font-size: 20px;
+            height: 20px;
         }
         .btnSettings{
             background-color: transparent;
@@ -34,6 +40,7 @@ $font-familyRoboto: 'Roboto', sans-serif;
         margin-top: 20px;
         display: flex;
         gap:20px;
+        margin-bottom: 20px;
         .balanceTitle{
             font-family: $font-familyRoboto;
             font-size: 20px;
@@ -45,12 +52,25 @@ $font-familyRoboto: 'Roboto', sans-serif;
     }
     .btnHistory {
         margin-top: 10px;
-        background-color: transparent;
+        background-color: #5E3D97;
         margin-bottom: 10px;
-        padding: 5px;
+        padding: 5px 10px;
         font-family: $font-familyRoboto;
         border: 1px solid #000;
         cursor: pointer;
         font-size: 13px;
+        color: #fff;
+        box-shadow: 0px 3px 6px #000;
+    }
+    .btnSerwerList{
+        background-color: #5E3D97;
+        padding: 5px 10px;
+        font-family: $font-familyRoboto;
+        border: 1px solid #000;
+        cursor: pointer;
+        font-size: 13px;
+        color: #fff;
+        box-shadow: 0px 3px 6px #000;
+        margin-top: 10px;
     }
 }

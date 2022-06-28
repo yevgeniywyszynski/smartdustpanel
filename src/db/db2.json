@@ -1,0 +1,73 @@
+{
+    "serwerList": [
+        {
+            "id": 2,
+            "serwerIP": "23.65.75.88",
+            "statusWork": "active"
+        },
+        {
+            "id": 4,
+            "serwerIP": "11.20.19.28",
+            "statusWork": "active"
+        },
+        {
+            "id": 6,
+            "serwerIP": "56.00.33.18",
+            "statusWork": "active"
+        },
+        {
+            "id": 9,
+            "serwerIP": "31.10.22.94",
+            "statusWork": "active"
+        }
+    ],
+
+    "transactionHistory": [
+        {
+            "data": "2022-06-15",
+            "orderType": "new serwer",
+            "amountPrice": "50 €"
+        },
+        {
+            "data": "2022-05-02",
+            "orderType": "new phone",
+            "amountPrice": "120 €"
+        },
+        {
+            "data": "2021-03-20",
+            "orderType": "new serwer",
+            "amountPrice": "50 €"
+        }
+    ],
+
+    "devicesList": [
+        {
+            "modelPhone": "SAMSUNG s22",
+            "seriaNumber": "861536030196001"
+        },
+        {
+            "modelPhone": "SAMSUNG s7",
+            "seriaNumber": "861536030196001"
+        },
+        {
+            "modelPhone": "SAMSUNG A20e",
+            "seriaNumber": "861536030196001"
+        },
+        {
+            "modelPhone": "SAMSUNG s6 Edge",
+            "seriaNumber": "861536030196001"
+        },
+        {
+            "modelPhone": "HUAWEI P20 Pro",
+            "seriaNumber": "861536030196001"
+        },
+        {
+            "modelPhone": "SAMSUNG A41",
+            "seriaNumber": "861536030196001"
+        },
+        {
+            "modelPhone": "HUAWEI P20 Lite",
+            "seriaNumber": "861536030196001"
+        }
+    ]
+}

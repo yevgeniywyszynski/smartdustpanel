@@ -1,0 +1,42 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.serwerWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 60px;
+    .serwer{
+        display: flex;
+        gap: 20px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #000;
+        align-items: center;
+        .serwerTitle{
+            font-size: 17px;
+            margin-bottom: 10px;
+            font-family: $font-familyRoboto;
+            margin-top: 10px;
+        }
+        .serwerIP{
+            font-size: 17px;
+            margin-bottom: 10px;
+            font-family: $font-familyRoboto;
+        }
+        .statusIcon {
+            color: green;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+        .statusIconError{
+            color: #DC143C;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+        .btnDevices{
+            margin-bottom: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

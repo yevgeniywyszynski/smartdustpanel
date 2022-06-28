@@ -4,17 +4,22 @@ import {Link} from 'react-router-dom';
 import { FaEnvelope, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import TransactionHistory from '../TransactionHistory/TransactionHistory';
 import Menu from '../Menu/Menu';
+import SerwerList from '../SerwerList/SerwerList';
+import { FaUserAlt } from 'react-icons/fa';
+
+
 
 const Panel = () => {
 
     const [showHistory, setShowHistory] = useState(false)
     const [showSettings, setShowSettings] = useState(false)
+    const [showSerwerList, setShowSerwerList] = useState(false)
 
     return(
         <div className={styles.panelWrapper}>
             
             <div className={styles.menuWrapper}>
-                <p className={styles.nickName}>Zalogowany jako: <span className={styles.nickStyl}>ywyszyn</span></p>
+                <p className={styles.nickName}><FaUserAlt className={styles.userIcon}/> <span className={styles.nickStyl}>ywyszyn</span></p>
                 <Link className={styles.emailIcon} to="/email"> <FaEnvelope className={styles.emailIcon} /></Link>
 
                 <button 
@@ -44,11 +49,24 @@ const Panel = () => {
                 type="button"
                 onClick={() => setShowHistory(!showHistory)}>
                     {showHistory? "Ukryj Historie" : "Historia konta"}
-               </button>
+            </button>
                
             <div className={styles.transactionWrapper}>
                 {
                     showHistory ? <TransactionHistory /> : null
+                }
+            </div>
+
+            <button
+                className={styles.btnSerwerList}
+                type="button"
+                onClick={() => setShowSerwerList(!showSerwerList)}>
+                    {showSerwerList? <FaChevronUp  className={styles.emailIcon} />   : "All your's devices" }
+            </button>
+
+            <div className={styles.serwerWrapper}>
+                {
+                    showSerwerList ? <SerwerList /> : null
                 }
             </div>
         </div>

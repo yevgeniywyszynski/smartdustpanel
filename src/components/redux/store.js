@@ -5,25 +5,9 @@ import devicesListRedux from '../redux/DevicesListRedux';
 import thunk from 'redux-thunk'
 
 const initalState = {
-
-    serwerList: {
-        data: [],
-        serwerIP: [],
-        qtyWorkingSerwer: 0,
-        request:{},
-        statusWork: [],
-    },
-
-    devicesList: {
-        modelPhone: 'Samusung s22',
-        seriaNumber: 'OP23I439',
-    },
-
-    transactionHistory: {
-        data: '',
-        orderType: '',
-        amountPrice: ''
-    }
+    serwerList: [],
+    devicesList: [],
+    transactionHistory: []
 }
 
 const reducers = {
