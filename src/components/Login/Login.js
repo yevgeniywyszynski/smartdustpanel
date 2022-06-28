@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import styles from '../Login/Login.module.scss';
+import {Link} from 'react-router-dom';
 
 const Login = () => {
 
     const[emailUser, setUserMail] = useState('')
     const[passwordUser, setUserPassword] = useState('')
 
-    const setUser = () => {
-        if(emailUser == '' || passwordUser == ''){
-            alert('wpisz swoj mail')
-        } else {
+    // const setUser = () => {
+    //     if(emailUser == '' || passwordUser == ''){
+    //         alert('wpisz swoj mail')
+    //     } else {
             
-        }
-    }
+    //     }
+    // }
 
     return(
         <div className={styles.loginsWrapper}>
@@ -29,20 +30,14 @@ const Login = () => {
             <div className={styles.mail}>
                 <p className={styles.titleLogin}>Password</p>
                 <input className={styles.login}
-                type="text"
+                type="password"
                 onChange={e=> setUserPassword(e.target.value)}
                 placeholder="password"
                 >    
                 </input>  
             </div>
             <div className={styles.btnWrapper}>
-                <button
-                 type="button" 
-                 className={styles.btnLog}
-                 onClick={setUser}
-                 >
-                Log in
-                </button>
+                <Link className={styles.btnLog} to="panel">Log in</Link>
             </div>
         </div>
     )

@@ -1,0 +1,47 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.panelWrapper{
+    background-color: #E4ECF6;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px;
+    .menuWrapper{
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+        align-items: center;
+        .nickName{
+            font-family: $font-familyRoboto;
+            .nickStyl{
+                color: #2BC1DE;
+                font-weight: bold;
+                font-family: $font-familyRoboto;
+            }
+        }
+        .emailIcon {
+            color: #000;
+            font-size: 20px;
+        }
+        .btnSettings{
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .settingsIcon{
+            font-size: 20px;
+        }
+    }
+
+    .amountWrapper{
+        margin-top: 20px;
+        display: flex;
+        gap:20px;
+        .balanceTitle{
+            font-family: $font-familyRoboto;
+            font-size: 20px;
+        }
+        .balance{
+          margin-left: 20px;
+          font-family: $font-familyRoboto;
+        }
+    }
+}
