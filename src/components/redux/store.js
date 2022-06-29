@@ -2,9 +2,16 @@ import { applyMiddleware, combineReducers, createStore, compose} from "redux"
 import transactionHistoryRedux from '../redux/TransactionHistoryRedux';
 import serwerListRedux from '../redux/SerwerListRedux';
 import devicesListRedux from '../redux/DevicesListRedux';
+import accountBalanceRedux from '../redux/AccountBalanceRedux';
 import thunk from 'redux-thunk'
 
 const initalState = {
+    accountBalance: {
+        balance: 200,
+        earningsWeek: 75,
+        earningsDay: 10,
+        earningsYear: 450, 
+    },
     serwerList: [],
     devicesList: [],
     transactionHistory: []
@@ -14,6 +21,7 @@ const reducers = {
     transactionHistory: transactionHistoryRedux,
     serwerList: serwerListRedux,
     devicesList: devicesListRedux,
+    accountBalance: accountBalanceRedux,
 }
 
 const storeReducer = combineReducers(reducers);

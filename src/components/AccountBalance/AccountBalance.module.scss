@@ -1,0 +1,21 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.amountWrapper{
+    margin-top: 20px;
+    display: flex;
+    gap:20px;
+    margin-bottom: 20px;
+    .amountType{
+        background-color: #fff;
+        font-family: $font-familyRoboto;
+        border: none;
+    }
+    .balanceTitle{
+        font-family: $font-familyRoboto;
+        font-size: 25px;
+    }
+    .balance{
+      margin-left: 10px;
+      font-family: $font-familyRoboto;
+    }
+}

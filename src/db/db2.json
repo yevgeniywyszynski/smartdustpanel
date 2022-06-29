@@ -42,30 +42,37 @@
 
     "devicesList": [
         {
+            "id": 2,
             "modelPhone": "SAMSUNG s22",
             "seriaNumber": "861536030196001"
         },
         {
+            "id": 3,
             "modelPhone": "SAMSUNG s7",
             "seriaNumber": "861536030196001"
         },
         {
+            "id": 0,
             "modelPhone": "SAMSUNG A20e",
             "seriaNumber": "861536030196001"
         },
         {
+            "id": 1,
             "modelPhone": "SAMSUNG s6 Edge",
             "seriaNumber": "861536030196001"
         },
         {
+            "id": 4,
             "modelPhone": "HUAWEI P20 Pro",
             "seriaNumber": "861536030196001"
         },
         {
+            "id": 6,
             "modelPhone": "SAMSUNG A41",
             "seriaNumber": "861536030196001"
         },
         {
+            "id": 8,
             "modelPhone": "HUAWEI P20 Lite",
             "seriaNumber": "861536030196001"
         }

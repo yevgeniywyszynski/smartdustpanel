@@ -6,6 +6,7 @@ import TransactionHistory from '../TransactionHistory/TransactionHistory';
 import Menu from '../Menu/Menu';
 import SerwerList from '../SerwerList/SerwerList';
 import { FaUserAlt } from 'react-icons/fa';
+import AccountBalance from '../AccountBalance/AccountBalance';
 
 const Panel = () => {
 
@@ -36,12 +37,7 @@ const Panel = () => {
                     showSettings ? <Menu /> : null
                 }
             </div>
-
-            <div className={styles.amountWrapper}>
-                <p className={styles.balanceTitle}>Stan konta: <span className={styles.balance}>100 €</span></p>
-                <p className={styles.balanceTitle}> + <span className={styles.balance}>75 € (week)</span></p>
-            </div>
-
+            <AccountBalance />
             <button 
                 className={styles.btnHistory} 
                 type="button"

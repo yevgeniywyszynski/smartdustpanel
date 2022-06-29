@@ -2,7 +2,6 @@ $font-familyRoboto: 'Roboto', sans-serif;
 
 .devicesWrapper{
     background-color: #fff;
-    padding: 20px;
     border-bottom: 2px solid #000;
     border-right: 2px solid #000;
     border-left: 2px solid #000;
@@ -14,6 +13,8 @@ $font-familyRoboto: 'Roboto', sans-serif;
         grid-template-columns: 3fr 3fr 1fr;
         margin-bottom: 20px;
         align-items: center;
+        padding: 10px 30px;
+        transition: 0.7s;
         .mobileWrapper{
             display: flex;
             align-items: center;
@@ -32,9 +33,15 @@ $font-familyRoboto: 'Roboto', sans-serif;
             font-size: 15px;
             color: #fff;
             font-family: $font-familyRoboto;
+            text-align: center;
+            text-decoration: none;
         }
     }
     .device:last-child {
         margin-bottom: 0;
+    }
+    .device:hover{
+        background-color: #FDF5E6;
+        box-shadow: 0px 3px 6px #000;
     }
 }

@@ -6,6 +6,7 @@ import Login from '../Login/Login';
 import Panel from '../Panel/Panel';
 import Settings from '../Settings/Settings';
 import Profile from '../Profile/Profile';
+import MobileView from '../MobileView/MobileView';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="email" element = {<Email />} />
             <Route path="panel/settings" element = {<Settings />} />
             <Route path="panel/profile" element = {<Profile />}/>
+            <Route path="panel/phone" element = {<MobileView />} />
           </Route>
         </Routes>
       </BrowserRouter>
