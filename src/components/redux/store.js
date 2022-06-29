@@ -4,6 +4,7 @@ import serwerListRedux from '../redux/SerwerListRedux';
 import devicesListRedux from '../redux/DevicesListRedux';
 import accountBalanceRedux from '../redux/AccountBalanceRedux';
 import thunk from 'redux-thunk'
+import db from '../../db/db2.json'
 
 const initalState = {
     accountBalance: {
@@ -12,9 +13,9 @@ const initalState = {
         earningsDay: 10,
         earningsYear: 450, 
     },
-    serwerList: [],
-    devicesList: [],
-    transactionHistory: []
+    serwerList: db.serwerList,
+    devicesList: db.devicesList,
+    transactionHistory: db.transactionHistory
 }
 
 const reducers = {

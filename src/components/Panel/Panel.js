@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import styles from '../Panel/Panel.module.scss';
 import {Link} from 'react-router-dom';
 import { FaEnvelope, FaChevronDown, FaChevronUp } from "react-icons/fa";
-import TransactionHistory from '../TransactionHistory/TransactionHistory';
+import TransactionHistory from '../TransactionHistory/TransactionHistoryContainer';
 import Menu from '../Menu/Menu';
-import SerwerList from '../SerwerList/SerwerList';
+import SerwerList from '../SerwerList/SerwerListContainer';
 import { FaUserAlt } from 'react-icons/fa';
 import AccountBalance from '../AccountBalance/AccountBalance';
 

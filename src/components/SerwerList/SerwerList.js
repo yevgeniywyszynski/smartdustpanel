@@ -1,84 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from '../SerwerList/SerwerList.module.scss';
 import { FaCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import DevicesList from "../DevicesList/DevicesList";
 
-const SerwerList = () => {
+const SerwerList = ({allSerwer}) => {
 
-    const [showDevices, setShowDevices] = useState(false)
+    const [showDevices, setShowDevices] = useState([])
 
+    useEffect(() => {
+        let n = allSerwer.length
+        setShowDevices(new Array(n).fill(false))
+    }, [])
+    
     return(
         <div className={styles.serwerWrapper}>
-            <div className={styles.serwer}>
-                <p className={styles.serwerTitle}>serwer</p>
-                <p className={styles.serwerIP}>IP: 23.43.11.39</p>
-                <p className={styles.serwerStatus}><FaCircle className={styles.statusIconError} /></p>
-                <button
-                    type="button"
-                    className={styles.btnDevices}
-                    onClick={() => setShowDevices(!showDevices)}>
-                    {showDevices ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
-                </button>
-            </div>
-            {
-                showDevices ? <DevicesList /> : null
-            }
-            <div className={styles.serwer}>
-                <p className={styles.serwerTitle}>serwer</p>
-                <p className={styles.serwerIP}>IP: 41.01.37.12</p>
-                <p className={styles.serwerStatus}><FaCircle className={styles.statusIcon} /></p>
-                <button
-                    type="button"
-                    className={styles.btnDevices}
-                    onClick={() => setShowDevices(!showDevices)}>
-                    {showDevices ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
-                </button>
-            </div>
-            {
-                showDevices ? <DevicesList /> : null
-            }
-            <div className={styles.serwer}>
-                <p className={styles.serwerTitle}>serwer</p>
-                <p className={styles.serwerIP}>IP: 10.87.22.84</p>
-                <p className={styles.serwerStatus}><FaCircle className={styles.statusIcon} /></p>
-                <button
-                    type="button"
-                    className={styles.btnDevices}
-                    onClick={() => setShowDevices(!showDevices)}>
-                    {showDevices ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
-                </button>
-            </div>
-            {
-                showDevices ? <DevicesList /> : null
-            }
-            <div className={styles.serwer}>
-                <p className={styles.serwerTitle}>serwer</p>
-                <p className={styles.serwerIP}>IP: 21.17.27.90</p>
-                <p className={styles.serwerStatus}><FaCircle className={styles.statusIcon} /></p>
-                <button
-                    type="button"
-                    className={styles.btnDevices}
-                    onClick={() => setShowDevices(!showDevices)}>
-                    {showDevices ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
-                </button>
-            </div>
-            {
-                showDevices ? <DevicesList /> : null
-            }
-            <div className={styles.serwer}>
-                <p className={styles.serwerTitle}>serwer</p>
-                <p className={styles.serwerIP}> IP: 80.27.00.51</p>
-                <p className={styles.serwerStatus}><FaCircle className={styles.statusIcon} /></p>
-                <button
-                    type="button"
-                    className={styles.btnDevices}
-                    onClick={() => setShowDevices(!showDevices)}>
-                    {showDevices ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
-                </button>
-            </div>
-            {
-                showDevices ? <DevicesList /> : null
-            }
+            {allSerwer.map((serwer,index) => (
+                <div key={serwer.id}>
+                <div className={styles.serwer}>
+                    <p className={styles.serwerTitle}>serwer</p>
+                    <p className={styles.serwerIP}>IP:{serwer.serwerIP}</p>
+                    <p className={styles.serwerStatus}><FaCircle className={serwer.statusWork !== "active" ? styles.statusIconError : styles.statusIcon} /></p>
+                    <button
+                        type="button"
+                        className={styles.btnDevices}
+                        onClick={() => {
+                            let temp = [...showDevices]
+                            temp[index] = !temp[index]
+                            setShowDevices(temp)
+                            }}>
+                        {showDevices[index] ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
+                    </button>
+                </div>
+                    {
+                        showDevices[index] ? <DevicesList /> : null
+                    }
+                </div>
+            ))}
         </div>
     )
 }

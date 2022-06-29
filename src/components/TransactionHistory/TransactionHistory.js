@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../TransactionHistory/TransactionHistory.module.scss';
 import {FaLongArrowAltRight } from "react-icons/fa";
 
-const TransactionHistory = () => {
+const TransactionHistory = ({allTransaction}) => {
     return(
         <div className={styles.transactionPageWrapper}>
             <div className={styles.titleWrapper}>
@@ -11,24 +11,14 @@ const TransactionHistory = () => {
                 <div></div>
                 <p className={styles.titleData}>Kwota</p>
             </div>
-            <div className={styles.historyWrapper}>
-                <p className={styles.dataStyl}>2022-06-15</p>
-                <p className={styles.dataStyl}>Nowy serwer</p>
-                <FaLongArrowAltRight className={styles.iconFinal}/>
-                <p className={styles.dataStylBold}> + 50 €</p>    
-            </div>
-            <div className={styles.historyWrapper}>
-                <p className={styles.dataStyl}>2022-05-10</p>
-                <p className={styles.dataStyl}> Nowy telefon</p>
-                <FaLongArrowAltRight className={styles.iconFinal}/>
-                <p className={styles.dataStylBold}> + 120 €</p>    
-            </div>
-            <div className={styles.historyWrapper}>
-                <p className={styles.dataStyl}>2021-01-24</p>
-                <p className={styles.dataStyl}> Nowy serwer</p>
-                <FaLongArrowAltRight className={styles.iconFinal}/>
-                <p className={styles.dataStylBold}> + 50 €</p>    
-            </div>
+            {allTransaction.map( transaction => (
+                <div className={styles.historyWrapper} key={transaction.id}>
+                    <p className={styles.dataStyl}>{transaction.data}</p>
+                    <p className={styles.dataStyl}>{transaction.orderType}</p>
+                    <FaLongArrowAltRight className={styles.iconFinal}/>
+                    <p className={styles.dataStylBold}> + {transaction.amountPrice}</p>    
+                </div>
+            ))}
         </div>
     )
 }
