@@ -8,10 +8,11 @@ import db from '../../db/db2.json'
 
 const initalState = {
     accountBalance: {
-        balance: 200,
-        earningsWeek: 75,
-        earningsDay: 10,
-        earningsYear: 450, 
+        balance: db.accountBalance.balance,
+        earningsWeek: db.accountBalance.earningsWeek,
+        earningsDay: db.accountBalance.earningsDay,
+        earningsYear: db.accountBalance.earningsYear,
+        earningType: db.accountBalance.earningType
     },
     serwerList: db.serwerList,
     devicesList: db.devicesList,

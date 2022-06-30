@@ -32,6 +32,16 @@
         }
     ],
 
+    "accountBalance": 
+        {
+            "balance": 200,
+            "earningsWeek": 75,
+            "earningsDay": 10,
+            "earningsYear": 450,
+            "earningType": "week"
+        }
+    ,
+
     "transactionHistory": [
         {
             "id": 1,

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import AccountBalance from '../AccountBalance/AccountBalance';
-import { getBalance, getEarningsWeek, getEarningsDay, getEarningsYear } from "../redux/AccountBalanceRedux";
+import { getBalance, getEarningsWeek, getEarningsDay, getEarningsYear, changeEarning } from "../redux/AccountBalanceRedux";
 
 const mapStateToProps = (state) => ({
     balance: getBalance(state),
@@ -9,4 +9,8 @@ const mapStateToProps = (state) => ({
     earningsYear: getEarningsYear(state)
 })
 
-export default connect(mapStateToProps,null)(AccountBalance);
+const mapDisptachToProps = dispatch => ({
+    changeEarning: (value) => dispatch(changeEarning(value)),
+})
+
+export default connect(mapStateToProps,mapDisptachToProps)(AccountBalance);
