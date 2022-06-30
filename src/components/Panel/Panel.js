@@ -6,7 +6,7 @@ import TransactionHistory from '../TransactionHistory/TransactionHistoryContaine
 import Menu from '../Menu/Menu';
 import SerwerList from '../SerwerList/SerwerListContainer';
 import { FaUserAlt } from 'react-icons/fa';
-import AccountBalance from '../AccountBalance/AccountBalance';
+import AccountBalance from '../AccountBalance/AccountBalanceContainer';
 
 const Panel = () => {
 
