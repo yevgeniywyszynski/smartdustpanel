@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from '../SerwerList/SerwerList.module.scss';
 import { FaCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
-import DevicesList from "../DevicesList/DevicesList";
+import DevicesList from "../DevicesList/DevicesListContainer";
 
 const SerwerList = ({allSerwer}) => {
 
@@ -11,7 +11,7 @@ const SerwerList = ({allSerwer}) => {
         let n = allSerwer.length
         setShowDevices(new Array(n).fill(false))
     }, [])
-    
+
     return(
         <div className={styles.serwerWrapper}>
             {allSerwer.map((serwer,index) => (

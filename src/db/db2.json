@@ -52,32 +52,32 @@
         {
             "id": 3,
             "modelPhone": "SAMSUNG s7",
-            "seriaNumber": "861536030196001"
+            "seriaNumber": "123536030196439"
         },
         {
             "id": 0,
             "modelPhone": "SAMSUNG A20e",
-            "seriaNumber": "861536030196001"
+            "seriaNumber": "782436030196883"
         },
         {
             "id": 1,
             "modelPhone": "SAMSUNG s6 Edge",
-            "seriaNumber": "861536030196001"
+            "seriaNumber": "300666789196777"
         },
         {
             "id": 4,
             "modelPhone": "HUAWEI P20 Pro",
-            "seriaNumber": "861536030196001"
+            "seriaNumber": "169892245196551"
         },
         {
             "id": 6,
             "modelPhone": "SAMSUNG A41",
-            "seriaNumber": "861536030196001"
+            "seriaNumber": "615360301961125"
         },
         {
             "id": 8,
             "modelPhone": "HUAWEI P20 Lite",
-            "seriaNumber": "861536030196001"
+            "seriaNumber": "444535551967777"
         }
     ]
 }
