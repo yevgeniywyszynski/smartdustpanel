@@ -1,0 +1,34 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.menuWrapper{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    .userIcon{
+        font-size: 20px;
+        margin-right: 10px;
+        color: #5E3D97;
+    }
+    .nickName{
+        font-family: $font-familyRoboto;
+        .nickStyl{
+            color: #2BC1DE;
+            font-family: $font-familyRoboto;
+        }
+    }
+    .emailIcon {
+        color: #5E3D97;
+        font-size: 20px;
+        height: 20px;
+    }
+    .btnSettings{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .settingsIcon{
+        font-size: 20px;
+    }
+}
