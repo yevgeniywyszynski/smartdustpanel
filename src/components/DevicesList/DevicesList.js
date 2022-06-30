@@ -14,7 +14,7 @@ const DevicesList = ({allDevices}) => {
                     </div>
                     <p className={styles.seriaNumber}>IMEI: {device.seriaNumber}</p>
                     <Link
-                        to={`/panel/${device.id}`}
+                        to={`/panel/mobile${device.id}`}
                         type="button"
                         className={styles.btnInfo}>
                             Open

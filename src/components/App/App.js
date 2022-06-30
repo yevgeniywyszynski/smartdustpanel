@@ -19,7 +19,7 @@ function App() {
             <Route path="email" element = {<Email />} />
             <Route path="panel/settings" element = {<Settings />} />
             <Route path="panel/profile" element = {<Profile />}/>
-            <Route path="panel/:id" element = {<MobileView />} />
+            <Route path="panel/mobile:id" element = {<MobileView />} />
           </Route>
         </Routes>
       </BrowserRouter>
