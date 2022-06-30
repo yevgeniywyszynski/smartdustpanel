@@ -1,16 +1,23 @@
-import React, { useState }  from "react";
+import React, { useState, useEffect }  from "react";
+import {useParams} from 'react-router-dom';
 import styles from '../MobileView/MobileView.module.scss';
 import { FaMobileAlt, FaSignal, FaRegTrashAlt } from 'react-icons/fa';
 
-const MobileView = () => {
+const MobileView = ({getDeviceById}) => {
 
-    const [mobile, setMobile] = useState('')
+    let{id} = useParams()
+    const [mobile, setMobile] = useState({})
+
+    useEffect(() =>{
+        setMobile(getDeviceById(id)[0])
+    }, [])
+
     
     return(
         <div className={styles.mobileWrapper}>
             <div className={styles.mobileDetail}>
-                <p className={styles.mobileTitle}>Samsung s22</p>
-                <p className={styles.seriaNumber}>IMEI: 112356788954</p>
+                <p className={styles.mobileTitle}>{mobile.modelPhone}</p>
+                <p className={styles.seriaNumber}>IMEI: {mobile.seriaNumber}</p>
                 <FaMobileAlt className={styles.mobileIcon} />
             </div>
             <div className={styles.controlWrapper}>
