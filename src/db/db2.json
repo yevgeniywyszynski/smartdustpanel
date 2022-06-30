@@ -19,6 +19,16 @@
             "id": 9,
             "serwerIP": "31.10.22.94",
             "statusWork": "inactive"
+        },
+        {
+            "id": 20,
+            "serwerIP": "01.12.19.55",
+            "statusWork": "inactive"
+        },
+        {
+            "id": 66,
+            "serwerIP": "66.00.00.11",
+            "statusWork": "active"
         }
     ],
 
