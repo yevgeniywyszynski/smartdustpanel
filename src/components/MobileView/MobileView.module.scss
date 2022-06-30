@@ -1,0 +1,57 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.mobileWrapper{
+    background-color: #E4ECF6;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    align-items: center;
+    .mobileTitle{
+        font-size: 30px;
+        font-family: $font-familyRoboto;
+    }
+    .seriaNumber{
+        font-size: 15px;
+        margin-top: 10px;
+        font-family: $font-familyRoboto;
+        
+    }
+    .mobileIcon{
+        font-size: 100px;
+        margin-top: 10px;
+    }
+    .controlWrapper{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .wifiBtn{
+        background-color: #86DE6A;
+        padding: 5px 20px;
+        border: none;
+        color: #fff;
+        display: flex;
+        font-size: 20px;
+        font-family: $font-familyRoboto;
+        cursor: pointer;
+        gap: 10px;.wifiIcon{
+            font-size: 20px;
+        }
+    }
+    .removeBtn{
+        padding: 5px 20px;
+        border: none;
+        background-color: #FF4B2B;
+        color: #fff;
+        cursor: pointer;
+        font-size: 19px;
+        font-family: $font-familyRoboto;
+        display: flex;
+        gap:10px;
+        .trashIcon{
+            font-size: 20px;
+        }
+    }
+}
