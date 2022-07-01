@@ -1,12 +1,20 @@
 import { connect } from "react-redux";
 import AccountBalance from '../AccountBalance/AccountBalance';
-import { getBalance, getEarningsWeek, getEarningsDay, getEarningsYear, changeEarning } from "../redux/AccountBalanceRedux";
+import { getBalance,
+        getDay,
+        getWeek,
+        getYear,
+        getMonth,
+        changeEarning,
+        getEarningType} from "../redux/AccountBalanceRedux";
 
 const mapStateToProps = (state) => ({
     balance: getBalance(state),
-    earningsDay: getEarningsDay(state),
-    earningsWeek: getEarningsWeek(state),
-    earningsYear: getEarningsYear(state)
+    day: getDay(state),
+    week: getWeek(state),
+    month: getMonth(state),
+    year: getYear(state),
+    earningType: getEarningType(state)
 })
 
 const mapDisptachToProps = dispatch => ({

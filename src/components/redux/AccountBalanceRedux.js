@@ -1,7 +1,9 @@
 export const getBalance = ({accountBalance}) => accountBalance.balance
-export const getEarningsWeek = ({accountBalance}) => accountBalance.earningsWeek
-export const getEarningsDay = ({accountBalance}) => accountBalance.earningsDay
-export const getEarningsYear = ({accountBalance}) => accountBalance.earningsYear
+export const getDay = ({accountBalance}) => accountBalance.day
+export const getWeek = ({accountBalance}) => accountBalance.week
+export const getMonth = ({accountBalance}) => accountBalance.month
+export const getYear = ({accountBalance}) => accountBalance.year
+export const getEarningType = ({accountBalance}) => accountBalance.earningType
 
 
 const reducerName = 'selectEarnings';

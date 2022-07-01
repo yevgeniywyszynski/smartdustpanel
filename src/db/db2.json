@@ -35,10 +35,11 @@
     "accountBalance": 
         {
             "balance": 200,
-            "earningsWeek": 75,
-            "earningsDay": 10,
-            "earningsYear": 450,
-            "earningType": "week"
+            "week": 75,
+            "day": 10,
+            "year": 450,
+            "month" : 100,
+            "earningType": "day"
         }
     ,
 
@@ -60,6 +61,12 @@
             "data": "2021-03-20",
             "orderType": "new serwer",
             "amountPrice": "50 €"
+        },
+        {
+            "id": 0,
+            "data": "2020-01-02",
+            "orderType": "new phone",
+            "amountPrice": "120 €"
         }
     ],
 
