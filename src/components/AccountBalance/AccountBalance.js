@@ -6,18 +6,26 @@ function AccountBalance({ balance, day, week, month, year, earningType, changeEa
     const [actualityEarning, setActualityEarnig] = useState(day);
 
     const chceckTypeEarning = () => {
-        if (earningType === "week") {
-            setActualityEarnig(week);
-        }
-        else if (earningType === "day") {
-            setActualityEarnig(day);
-        }
-        else if (earningType === "year") {
-            setActualityEarnig(year);
-        }
-        else if (earningType === "month") {
-            setActualityEarnig(month);
-        }
+        setActualityEarnig(eval(earningType));
+        
+        // setActualityEarnig(earningType)
+        // var obj = {day:1, week:2}
+        // obj['day']=2
+        // var x='week'
+        // obj[x]=2
+
+        // if (earningType === "week") {
+        //     setActualityEarnig(week);
+        // }
+        // else if (earningType === "day") {
+        //     setActualityEarnig(day);
+        // }
+        // else if (earningType === "year") {
+        //     setActualityEarnig(year);
+        // }
+        // else if (earningType === "month") {
+        //     setActualityEarnig(month);
+        // }
     };
     
 
@@ -28,8 +36,9 @@ function AccountBalance({ balance, day, week, month, year, earningType, changeEa
             <select className={styles.amountType} id="currency"
                 onChange={(e => {
                     changeEarning(e.target.value);
-                    earningType=e.target.value
-                    chceckTypeEarning();
+                    setActualityEarnig(eval(e.target.value));
+                    // earningType=e.target.value
+                    // chceckTypeEarning();
                 })}
             >
                 <option value="day">day</option>

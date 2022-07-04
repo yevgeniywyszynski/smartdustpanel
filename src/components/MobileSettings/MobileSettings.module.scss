@@ -1,0 +1,45 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.settingsWrapper {
+    display: flex;
+    gap: 20px;
+    .btnWifi{
+        background-color: #86DE6A;
+        padding: 5px 10px;
+        border: none;
+        color: #fff;
+        display: flex;
+        font-size: 15px;
+        font-family: $font-familyRoboto;
+        cursor: pointer;
+        gap: 10px;
+        .wifiIcon{
+            font-size: 15px;
+        }
+    }
+    .btnRemove{
+        padding: 5px 10px;
+        border: none;
+        background-color: #FF4B2B;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        font-family: $font-familyRoboto;
+        display: flex;
+        gap:10px;
+        .trashIcon{
+            font-size: 15px;
+        }
+    }
+    .btnInfo {
+        background-color: #87CEFA;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 15px;
+        color: #fff;
+        font-family: $font-familyRoboto;
+        text-align: center;
+        text-decoration: none;
+    }
+}

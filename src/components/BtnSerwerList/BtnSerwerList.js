@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styles from '../BtnSerwerList/BtnSerwerList.module.scss';
-import { FaChevronUp } from "react-icons/fa";
 import SerwerList from '../SerwerList/SerwerListContainer';
 
 const BtnSerwerList = () => {
@@ -13,7 +12,7 @@ const BtnSerwerList = () => {
                 className={styles.btnSerwerList}
                 type="button"
                 onClick={() => setShowSerwerList(!showSerwerList)}>
-                    {showSerwerList? <FaChevronUp  className={styles.emailIcon} />   : "All your's devices" }
+                    {showSerwerList? "Close your's devices": "All your's devices" }
             </button>
 
             <div className={styles.serwerWrapper}>

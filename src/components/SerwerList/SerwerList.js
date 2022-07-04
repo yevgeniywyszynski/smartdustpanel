@@ -17,9 +17,9 @@ const SerwerList = ({allSerwer}) => {
             {allSerwer.map((serwer,index) => (
                 <div key={serwer.id}>
                 <div className={styles.serwer}>
+                    <p className={styles.serwerStatus}><FaCircle className={serwer.statusWork !== "active" ? styles.statusIconError : styles.statusIcon} /></p>
                     <p className={styles.serwerTitle}>serwer</p>
                     <p className={styles.serwerIP}>IP:{serwer.serwerIP}</p>
-                    <p className={styles.serwerStatus}><FaCircle className={serwer.statusWork !== "active" ? styles.statusIconError : styles.statusIcon} /></p>
                     <button
                         type="button"
                         className={styles.btnDevices}

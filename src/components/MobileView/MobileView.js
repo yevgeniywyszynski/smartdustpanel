@@ -1,7 +1,7 @@
 import React, { useState, useEffect }  from "react";
 import {useParams} from 'react-router-dom';
 import styles from '../MobileView/MobileView.module.scss';
-import { FaMobileAlt, FaSignal, FaRegTrashAlt } from 'react-icons/fa';
+import { FaMobileAlt, FaUndoAlt} from 'react-icons/fa';
 
 const MobileView = ({getDeviceById}) => {
 
@@ -24,15 +24,8 @@ const MobileView = ({getDeviceById}) => {
                 <div className={styles.btnWrapper}>
                     <button 
                         type="button"
-                        className={styles.wifiBtn}>
-                           Wifi <FaSignal className={styles.wifiIcon}/>
-                    </button>
-                </div>
-                <div className={styles.btnWrapper}>
-                    <button
-                        type="button"
-                        className={styles.removeBtn}>
-                            Remove Phone <FaRegTrashAlt className={styles.trashIcon}/>
+                        className={styles.resetBtn}>
+                           RESET <FaUndoAlt className={styles.wifiIcon}/>
                     </button>
                 </div>
             </div>

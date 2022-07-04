@@ -6,18 +6,30 @@ $font-familyRoboto: 'Roboto', sans-serif;
     border-right: 2px solid #000;
     border-left: 2px solid #000;
     .mobileIcon{
-        font-size: 25px;
+        font-size: 35px;
     }
     .device{
         display: grid;
-        grid-template-columns: 3fr 3fr 1fr;
+        grid-template-columns: 4fr 1fr;
         margin-bottom: 20px;
         align-items: center;
         padding: 10px 30px;
         transition: 0.7s;
         .mobileWrapper{
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 9fr;
             align-items: center;
+            .mobileIconMoreWrapper {
+                display: grid;
+                gap: 10px;
+                align-items: center;
+                grid-template-columns: 1fr 1fr;
+                .btnSettings{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
         }
         .modelTitle{
             font-family: $font-familyRoboto;
@@ -26,8 +38,8 @@ $font-familyRoboto: 'Roboto', sans-serif;
             font-family: $font-familyRoboto;
         }
         .btnInfo {
-            background-color: #008000;
-            border: 1px solid #5E3D97;
+            background-color: #87CEFA;
+            border: none;
             padding: 5px 10px;
             cursor: pointer;
             font-size: 15px;
@@ -35,6 +47,10 @@ $font-familyRoboto: 'Roboto', sans-serif;
             font-family: $font-familyRoboto;
             text-align: center;
             text-decoration: none;
+        }
+
+        .settingsWrapper{
+            margin-top: 20px;
         }
     }
     .device:last-child {

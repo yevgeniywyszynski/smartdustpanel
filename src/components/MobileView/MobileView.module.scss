@@ -27,31 +27,18 @@ $font-familyRoboto: 'Roboto', sans-serif;
         justify-content: center;
         gap: 20px;
     }
-    .wifiBtn{
-        background-color: #86DE6A;
+    .resetBtn{
+        background-color: #87CEFA;
         padding: 5px 20px;
         border: none;
         color: #fff;
         display: flex;
-        font-size: 20px;
+        font-size: 15px;
         font-family: $font-familyRoboto;
         cursor: pointer;
-        gap: 10px;.wifiIcon{
-            font-size: 20px;
-        }
-    }
-    .removeBtn{
-        padding: 5px 20px;
-        border: none;
-        background-color: #FF4B2B;
-        color: #fff;
-        cursor: pointer;
-        font-size: 19px;
-        font-family: $font-familyRoboto;
-        display: flex;
-        gap:10px;
-        .trashIcon{
-            font-size: 20px;
+        gap: 10px;
+        .wifiIcon{
+            font-size: 15px;
         }
     }
 }
