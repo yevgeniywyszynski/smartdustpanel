@@ -9,7 +9,11 @@ const MobileSettings = ({device}) => {
             <button className={styles.btnWifi}>
                 Wifi <FaWifi className={styles.wifiIcon}/>
             </button>
-            <button className={styles.btnRemove}>
+            <button 
+                className={styles.btnRemove}
+                type="button"
+                onClick={() => console.log(device.id)}
+            >
                 Delate <FaRegTrashAlt className={styles.trashIcon}/>
             </button>
             <Link

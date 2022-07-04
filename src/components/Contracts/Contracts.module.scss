@@ -1,0 +1,22 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.contarctPage{
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    .contractWrapper{
+        display: flex;
+        gap: 5px;
+        margin-top: 10px;
+        .title{
+            font-family: $font-familyRoboto;
+            font-size: 16px;
+        }
+    }
+    .signed{
+        color: #006400;
+    }
+    .noSigned{
+        color: #8B0000;
+    }
+}

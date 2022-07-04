@@ -1,0 +1,36 @@
+$font-familyRoboto: 'Roboto', sans-serif;
+
+.profileWrapper{
+    background-color: #E4ECF6;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 30px;
+    .name{
+        font-family: $font-familyRoboto;
+        font-size: 20px;
+    }
+    .contact {
+        font-family: $font-familyRoboto;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .contractList{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .title{
+            font-family: $font-familyRoboto;
+            font-size: 20px;
+        }
+    }
+    .btn {
+        background-color: #9370DB;
+        color: #fff;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 10px;
+        cursor: pointer;
+    }
+}

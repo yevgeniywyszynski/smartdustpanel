@@ -3,6 +3,7 @@ import transactionHistoryRedux from '../redux/TransactionHistoryRedux';
 import serwerListRedux from '../redux/SerwerListRedux';
 import devicesListRedux from '../redux/DevicesListRedux';
 import accountBalanceRedux from '../redux/AccountBalanceRedux';
+import contractsRedux from '../redux/ContractsRedux';
 import thunk from 'redux-thunk'
 import db from '../../db/db2.json'
 
@@ -17,7 +18,8 @@ const initalState = {
     },
     serwerList: db.serwerList,
     devicesList: db.devicesList,
-    transactionHistory: db.transactionHistory
+    transactionHistory: db.transactionHistory,
+    contracts: db.contracts
 }
 
 const reducers = {
@@ -25,6 +27,7 @@ const reducers = {
     serwerList: serwerListRedux,
     devicesList: devicesListRedux,
     accountBalance: accountBalanceRedux,
+    contracts: contractsRedux,
 }
 
 const storeReducer = combineReducers(reducers);

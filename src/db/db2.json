@@ -106,5 +106,28 @@
             "modelPhone": "HUAWEI P20 Lite",
             "seriaNumber": "444535551967777"
         }
+    ],
+
+    "contracts" : [
+        {
+            "id": 21,
+            "title": "Umowa Partnerska",
+            "status": "NoSigned"
+        },
+        {
+            "id": 25,
+            "title": "Umowa Dystrybucji",
+            "status": "signed"
+        },
+        {
+            "id": 11,
+            "title": "RODO",
+            "status": "NoSigned"
+        },
+        {
+            "id": 84,
+            "title": "Leasing Sprzętu",
+            "status": "signed"
+        }
     ]
 }

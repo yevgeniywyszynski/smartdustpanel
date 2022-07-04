@@ -5,7 +5,6 @@ import { FaMobile } from 'react-icons/fa';
 import MobileSettings from "../MobileSettings/MobileSettings";
 
 const DevicesList = ({allDevices}) => {
-
     const [showSettings, setShowSettings] = useState([]);
 
     useEffect(() => {
