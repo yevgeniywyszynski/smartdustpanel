@@ -3,7 +3,7 @@ import styles from '../MobileSettings/MobileSettings.module.scss';
 import {FaWifi, FaRegTrashAlt } from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 
-const MobileSettings = ({device}) => {
+const MobileSettings = ({device, removeDevice}) => {
     return(
         <div className={styles.settingsWrapper}>
             <button className={styles.btnWifi}>
@@ -12,7 +12,7 @@ const MobileSettings = ({device}) => {
             <button 
                 className={styles.btnRemove}
                 type="button"
-                onClick={() => console.log(device.id)}
+                onClick={() => removeDevice(device.id)}
             >
                 Delate <FaRegTrashAlt className={styles.trashIcon}/>
             </button>

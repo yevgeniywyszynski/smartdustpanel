@@ -10,12 +10,13 @@ export const removeDevice = payload => ({payload, type: REMOVE_DEVICE})
 export default function reducer(statePart=[], action={}) {
     switch(action.type) {
         case REMOVE_DEVICE:
-            // let removeDeviceId = statePart.devicesList
-            // removeDeviceId.splice(removeDeviceId.indexOf(action.payload),1)
-            return {
-                // ...statePart, devicesList: removeDeviceId
+            for(let i of statePart){
+                if(i.id === action.payload){
+                    statePart.splice(statePart.indexOf(i), 1)
+                }
             }
-        default: 
             return statePart
+    default: 
+        return statePart
     }
 }

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from '../DevicesList/DevicesList.module.scss';
 import {FaChevronDown, FaChevronUp} from "react-icons/fa";
 import { FaMobile } from 'react-icons/fa';
-import MobileSettings from "../MobileSettings/MobileSettings";
+import MobileSettings from "../MobileSettings/MobileSettingsContainer";
 
 const DevicesList = ({allDevices}) => {
     const [showSettings, setShowSettings] = useState([]);
