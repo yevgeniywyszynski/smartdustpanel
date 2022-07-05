@@ -1,17 +1,15 @@
-$font-familyRoboto: 'Roboto', sans-serif;
 
 .profileWrapper{
     background-color: #E4ECF6;
     box-shadow: 0px 3px 6px #00000029;
     padding: 30px;
     .name{
-        font-family: $font-familyRoboto;
         font-size: 20px;
+        font-weight: bold;
     }
     .contact {
-        font-family: $font-familyRoboto;
         font-size: 16px;
-        margin-top: 10px;
+        margin-top: 15px;
     }
     .contractList{
         margin-top: 50px;
@@ -19,7 +17,6 @@ $font-familyRoboto: 'Roboto', sans-serif;
         align-items: center;
         gap: 10px;
         .title{
-            font-family: $font-familyRoboto;
             font-size: 20px;
         }
     }

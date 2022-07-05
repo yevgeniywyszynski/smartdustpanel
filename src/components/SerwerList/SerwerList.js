@@ -15,22 +15,24 @@ const SerwerList = ({allSerwer}) => {
     return(
         <div className={styles.serwerWrapper}>
             {allSerwer.map((serwer,index) => (
-                <div key={serwer.id}>
-                <div className={styles.serwer}>
-                    <p className={styles.serwerStatus}><FaCircle className={serwer.statusWork !== "active" ? styles.statusIconError : styles.statusIcon} /></p>
-                    <p className={styles.serwerTitle}>serwer</p>
-                    <p className={styles.serwerIP}>IP:{serwer.serwerIP}</p>
-                    <button
-                        type="button"
-                        className={styles.btnDevices}
-                        onClick={() => {
-                            let temp = [...showDevices]
-                            temp[index] = !temp[index]
-                            setShowDevices(temp)
-                            }}>
-                        {showDevices[index] ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
-                    </button>
-                </div>
+                <div key={serwer.id} 
+                onClick={() => {
+                    let temp = [...showDevices]
+                    temp[index] = !temp[index]
+                    setShowDevices(temp)
+                    }}>
+                    <div className={styles.serwer}>
+                        <div className={styles.ipWrapper}>
+                            <p className={styles.serwerStatus}><FaCircle className={serwer.statusWork !== "active" ? styles.statusIconError : styles.statusIcon} /></p>
+                            <p className={styles.serwerIP}>IP: {serwer.serwerIP}</p>
+                        </div>
+                        <button
+                            type="button"
+                            className={styles.btnDevices}
+                        >
+                            {showDevices[index] ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
+                        </button>
+                    </div>
                     {
                         showDevices[index] ? <DevicesList /> : null
                     }

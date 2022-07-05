@@ -11,7 +11,7 @@ const Navigation = () => {
     return(
         <div className={styles.navigationWrapper}>
             <div className={styles.menuWrapper}>
-                <p className={styles.nickName}><FaUserAlt className={styles.userIcon}/> <span className={styles.nickStyl}>ywyszyn</span></p>
+                <Link className={styles.userIcon} to="/panel/profile"> <FaUserAlt className={styles.userIcon} />ywyszyn</Link>
                 <Link className={styles.emailIcon} to="/email"> <FaEnvelope className={styles.emailIcon} /></Link>
                 <button 
                     type="button"

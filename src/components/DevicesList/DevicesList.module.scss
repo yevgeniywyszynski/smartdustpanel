@@ -1,4 +1,3 @@
-$font-familyRoboto: 'Roboto', sans-serif;
 
 .devicesWrapper{
     background-color: #fff;
@@ -9,33 +8,21 @@ $font-familyRoboto: 'Roboto', sans-serif;
         font-size: 35px;
     }
     .device{
-        display: grid;
-        grid-template-columns: 4fr 1fr;
         margin-bottom: 20px;
         align-items: center;
         padding: 10px 30px;
         transition: 0.7s;
         .mobileWrapper{
             display: grid;
-            grid-template-columns: 1fr 9fr;
+            grid-template-columns: 1fr 4fr 4fr 0.5fr;
             align-items: center;
-            .mobileIconMoreWrapper {
-                display: grid;
-                gap: 10px;
-                align-items: center;
-                grid-template-columns: 1fr 1fr;
+
                 .btnSettings{
                     background-color: transparent;
                     border: none;
                     cursor: pointer;
                 }
-            }
-        }
-        .modelTitle{
-            font-family: $font-familyRoboto;
-        }
-        .seriaNumber{
-            font-family: $font-familyRoboto;
+            
         }
         .btnInfo {
             background-color: #87CEFA;
@@ -44,7 +31,6 @@ $font-familyRoboto: 'Roboto', sans-serif;
             cursor: pointer;
             font-size: 15px;
             color: #fff;
-            font-family: $font-familyRoboto;
             text-align: center;
             text-decoration: none;
         }
@@ -58,6 +44,6 @@ $font-familyRoboto: 'Roboto', sans-serif;
     }
     .device:hover{
         background-color: #FDF5E6;
-        box-shadow: 0px 3px 6px #000;
+        box-shadow: 0px 1px 6px #000;
     }
 }

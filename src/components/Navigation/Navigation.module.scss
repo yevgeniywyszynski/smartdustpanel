@@ -10,13 +10,13 @@ $font-familyRoboto: 'Roboto', sans-serif;
         font-size: 20px;
         margin-right: 10px;
         color: #5E3D97;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
     }
-    .nickName{
+    .userName{
+        color: #5E3D97;
         font-family: $font-familyRoboto;
-        .nickStyl{
-            color: #2BC1DE;
-            font-family: $font-familyRoboto;
-        }
     }
     .emailIcon {
         color: #5E3D97;

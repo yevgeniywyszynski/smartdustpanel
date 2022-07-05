@@ -3,6 +3,7 @@ import styles from '../TransactionHistory/TransactionHistory.module.scss';
 import {FaLongArrowAltRight } from "react-icons/fa";
 
 const TransactionHistory = ({allTransaction}) => {
+    
     return(
         <div className={styles.transactionPageWrapper}>
             <div className={styles.titleWrapper}>
@@ -16,7 +17,7 @@ const TransactionHistory = ({allTransaction}) => {
                     <p className={styles.dataStyl}>{transaction.data}</p>
                     <p className={styles.dataStyl}>{transaction.orderType}</p>
                     <FaLongArrowAltRight className={styles.iconFinal}/>
-                    <p className={styles.dataStylBold}> + {transaction.amountPrice}</p>    
+                    <p className={styles.dataStylBold}> + {transaction.amountPrice}</p>
                 </div>
             ))}
         </div>

@@ -32,16 +32,14 @@
         }
     ],
 
-    "accountBalance": 
-        {
-            "balance": 200,
-            "week": 75,
-            "day": 10,
-            "year": 450,
-            "month" : 100,
-            "earningType": "day"
-        }
-    ,
+    "accountBalance": {
+        "balance": 200,
+        "week": 75,
+        "day": 10,
+        "year": 450,
+        "month" : 100,
+        "earningType": "day"
+    },
 
     "transactionHistory": [
         {

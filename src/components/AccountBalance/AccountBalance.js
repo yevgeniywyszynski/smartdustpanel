@@ -28,7 +28,6 @@ function AccountBalance({ balance, day, week, month, year, earningType, changeEa
         // }
     };
     
-
     return ( 
         <div className={styles.amountWrapper}>
             <p className={styles.balanceTitle}>Stan konta: <span className={styles.balance}>{balance}€</span></p>

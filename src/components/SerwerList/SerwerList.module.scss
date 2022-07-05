@@ -1,25 +1,29 @@
-$font-familyRoboto: 'Roboto', sans-serif;
 
 .serwerWrapper{
-    display: flex;
-    flex-direction: column;
     margin-top: 20px;
     padding: 60px;
     .serwer{
         display: flex;
         gap: 20px;
         border-bottom: 2px solid #000;
+        justify-content: space-between;
         align-items: center;
         margin-top: 20px;
+        cursor: pointer;
+
+        .ipWrapper{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
         .serwerTitle{
             font-size: 17px;
             margin-bottom: 10px;
-            font-family: $font-familyRoboto;
         }
         .serwerIP{
             font-size: 17px;
             margin-bottom: 10px;
-            font-family: $font-familyRoboto;
         }
         .statusIcon {
             color: green;
