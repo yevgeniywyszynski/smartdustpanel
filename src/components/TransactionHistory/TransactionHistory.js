@@ -35,7 +35,7 @@ const TransactionHistory = ({allTransaction, typeCurrency}) => {
                 </div>
             ))}
             <div className={styles.sumWrapper}>
-                <p className={styles.sumTransaction}>suma:</p>
+                <p className={styles.sumTransaction}>Suma wszystkich transakcji:</p>
                 <p className={styles.sumTransaction}>{sumTransaction} €</p>
             </div>
         </div>

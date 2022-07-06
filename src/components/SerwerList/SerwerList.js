@@ -15,7 +15,7 @@ const SerwerList = ({allSerwer, addStoreSerwer}) => {
 
     const addNewSerwer = () => {
         if(serwerIP == '' || serwerIP.length < 11){
-            alert("pole adres IP jest puste, albo za krótki IP")
+            alert("pole IP jest puste, albo za krótkie ")
         } else {
             let newObj = {
                 id: Math.floor(Math.random() * 1000),

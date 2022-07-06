@@ -9,6 +9,8 @@ const Contracts = ({allContracts}) => {
                 <div className={styles.contractWrapper} key={contract.id}>
                     {contract.status !== "signed" ? <FaRegCircle className={styles.noSigned}/> : <FaCheckCircle className={styles.signed}/>}
                     <p className={styles.title}>{contract.title}</p>
+                    <p className={styles.dataSigned}> data podpisanaia: {contract.dataSigned}</p>
+                    <p className={styles.dateAdd}> aktualizacja: {contract.lastActualisation}</p>
                 </div>
             ))}
         </div>

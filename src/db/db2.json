@@ -121,7 +121,9 @@
         {
             "id": 21,
             "title": "Umowa Partnerska",
-            "status": "NoSigned"
+            "status": "NoSigned",
+            "dataSigned": "",
+            "lastActualisation": ""
         },
         {
             "id": 25,
@@ -134,8 +136,8 @@
             "id": 11,
             "title": "RODO",
             "status": "NoSigned",
-            "dataSigned": "2021-01-15",
-            "lastActualisation": "2021-12-03"
+            "dataSigned": "",
+            "lastActualisation": ""
         },
         {
             "id": 84,
