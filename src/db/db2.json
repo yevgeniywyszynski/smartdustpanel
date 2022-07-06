@@ -46,25 +46,36 @@
             "id": 1,
             "data": "2022-06-15",
             "orderType": "new serwer",
-            "amountPrice": "50 €"
+            "amountPrice": 50,
+            "typeCurrency": "€"
         },
         {
             "id": 0,
             "data": "2022-05-02",
             "orderType": "new phone",
-            "amountPrice": "120 €"
+            "amountPrice": 120,
+            "typeCurrency": "€"
         },
         {
             "id": 4,
             "data": "2021-03-20",
             "orderType": "new serwer",
-            "amountPrice": "50 €"
+            "amountPrice": 50,
+            "typeCurrency": "€"
         },
         {
             "id": 10,
             "data": "2020-01-02",
             "orderType": "new phone",
-            "amountPrice": "120 €"
+            "amountPrice": 120,
+            "typeCurrency": "€"
+        },
+        {
+            "id": 92,
+            "data": "2022-06-15",
+            "orderType": "new serwer",
+            "amountPrice": 50,
+            "typeCurrency": "€"
         }
     ],
 
@@ -115,17 +126,23 @@
         {
             "id": 25,
             "title": "Umowa Dystrybucji",
-            "status": "signed"
+            "status": "signed",
+            "dataSigned": "2022-06-15",
+            "lastActualisation": "2022-06-21"
         },
         {
             "id": 11,
             "title": "RODO",
-            "status": "NoSigned"
+            "status": "NoSigned",
+            "dataSigned": "2021-01-15",
+            "lastActualisation": "2021-12-03"
         },
         {
             "id": 84,
             "title": "Leasing Sprzętu",
-            "status": "signed"
+            "status": "signed",
+            "dataSigned": "2022-02-05",
+            "lastActualisation": "2022-04-17"
         }
     ]
 }

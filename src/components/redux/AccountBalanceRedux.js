@@ -5,7 +5,6 @@ export const getMonth = ({accountBalance}) => accountBalance.month
 export const getYear = ({accountBalance}) => accountBalance.year
 export const getEarningType = ({accountBalance}) => accountBalance.earningType
 
-
 const reducerName = 'selectEarnings';
 const createActionName = name => `app/${reducerName}/${name}`;
 

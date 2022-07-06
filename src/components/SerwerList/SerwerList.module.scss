@@ -2,6 +2,10 @@
 .serwerWrapper{
     margin-top: 20px;
     padding: 60px;
+    .addWrapper{
+        display: flex;
+        gap: 20px;
+    }
     .serwer{
         display: flex;
         gap: 20px;

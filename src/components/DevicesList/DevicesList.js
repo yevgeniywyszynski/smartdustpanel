@@ -15,20 +15,22 @@ const DevicesList = ({allDevices}) => {
     return(
         <div className={styles.devicesWrapper}>
             {allDevices.map((device, index) =>(
-                <div className={styles.device} key={device.id}>
+                <div className={styles.device} key={device.id}
+                
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        let arrayMobile = [...showSettings]
+                        arrayMobile[index] = !arrayMobile[index]
+                        setShowSettings(arrayMobile)
+                    }}>
+
                     <div className={styles.mobileWrapper}>
                         <FaMobile className={styles.mobileIcon}/>
                         <p className={styles.modelTitle}>{device.modelPhone}</p>
                         <p className={styles.seriaNumber}>IMEI: {device.seriaNumber}</p>
                         <button 
                             type="button"
-                            className={styles.btnSettings} 
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                let arrayMobile = [...showSettings]
-                                arrayMobile[index] = !arrayMobile[index]
-                                setShowSettings(arrayMobile)
-                                }}>
+                            className={styles.btnSettings}>
                             {showSettings[index] ? <FaChevronUp className={styles.emailIcon}/> : <FaChevronDown className={styles.emailIcon} />}
                         </button>
                     </div>
@@ -36,6 +38,7 @@ const DevicesList = ({allDevices}) => {
                     {
                         showSettings[index] ?  <div className={styles.settingsWrapper}><MobileSettings device={device} /> </div> : null
                     }
+
                 </div>
             ))}
         </div>

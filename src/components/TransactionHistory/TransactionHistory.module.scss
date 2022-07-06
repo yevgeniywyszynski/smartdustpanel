@@ -4,6 +4,7 @@ $font-familyRoboto: 'Roboto', sans-serif;
     background-color:transparent;
     padding: 60px;
 }
+
 .titleWrapper{
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
@@ -35,4 +36,10 @@ $font-familyRoboto: 'Roboto', sans-serif;
     .iconFinal{
         color: #335566;;
     }
+}
+
+.sumWrapper{
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
 }
