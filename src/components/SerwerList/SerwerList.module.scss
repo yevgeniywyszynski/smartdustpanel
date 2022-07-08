@@ -2,23 +2,7 @@
 .serwerWrapper{
     margin-top: 20px;
     padding: 60px;
-    .addWrapper{
-        display: flex;
-        gap: 20px;
-        .dataSerwer{
-            .serwerDataForm{
-                padding: 7px 20px;
-                font-size: 15px;
-                border: 1px solid #000;
-            }
-        }
-        .btnAddSerwer{
-            background-color: #5E3D97;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-    }
+
     .serwer{
         display: flex;
         gap: 20px;

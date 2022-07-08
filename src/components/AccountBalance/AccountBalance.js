@@ -12,10 +12,8 @@ function AccountBalance({
     typeCurrency
 }) {
 
-
     const [actualityEarning, setActualityEarnig] = useState(day);
 
-    
     return (
         <div className={styles.amountWrapper}>
             <p className={styles.balanceTitle}>Stan konta: <span className={styles.balance}>{balance}{typeCurrency}</span></p>
@@ -24,6 +22,10 @@ function AccountBalance({
                 onChange={(e => {
                     changeEarning(e.target.value);
                     setActualityEarnig(e.target.value);
+                    console.log(e.target.selectedIndex);
+                    console.log(e.target.options[e.target.selectedIndex]);
+                    
+                    console.log(e.target.options[e.target.selectedIndex].innerText);
                 })}
             >
                 <option value={day}>day</option>
