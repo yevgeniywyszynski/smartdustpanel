@@ -36,25 +36,3 @@ function AccountBalance({
 }
 
 export default AccountBalance;
-
-const array = [
-    {
-        min: 20,
-        max: 30,
-    },
-    {
-        min: 10,
-        max: 30,
-    },
-    {
-        min: 50,
-        max: 30,
-    } 
-]
-
-let sum = 0
-for(let i of array) {
-    sum = sum + i.min
-}
-
-console.log(sum)
