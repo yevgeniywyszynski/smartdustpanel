@@ -4,6 +4,7 @@ export const getWeek = ({accountBalance}) => accountBalance.week
 export const getMonth = ({accountBalance}) => accountBalance.month
 export const getYear = ({accountBalance}) => accountBalance.year
 export const getEarningType = ({accountBalance}) => accountBalance.earningType
+export const getTypeCurrency = ({accountBalance}) => accountBalance.typeCurrency
 
 const reducerName = 'selectEarnings';
 const createActionName = name => `app/${reducerName}/${name}`;

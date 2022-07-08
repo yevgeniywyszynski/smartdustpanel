@@ -4,17 +4,12 @@ $font-familyRoboto: 'Roboto', sans-serif;
     background-color: #fff;
     margin-top: 10px;
     .contractWrapper{
-        margin-top: 15px;
         display: grid;
         padding: 20px 30px;
-        transition: 0.3s;
+        transition: 0.4s;
         cursor: pointer;
         grid-template-columns: 0.5fr 5fr 2fr 2fr;
         gap: 20px;
-        .title{
-            font-family: $font-familyRoboto;
-            font-size: 16px;
-        }
     }
     .signed{
         color: #006400;
@@ -23,8 +18,18 @@ $font-familyRoboto: 'Roboto', sans-serif;
         color: #8B0000;
     }
 }
+.title{
+    font-family: $font-familyRoboto;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.4s;
+    color: #000;
+}
 
 .contractWrapper:hover{
     background-color: #2BC1DE;
+    color: #fff;
+}
+.contractWrapper:hover .title{
     color: #fff;
 }

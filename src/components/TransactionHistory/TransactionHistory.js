@@ -31,12 +31,12 @@ const TransactionHistory = ({allTransaction, typeCurrency}) => {
                     <p className={styles.dataStyl}>{transaction.data}</p>
                     <p className={styles.dataStyl}>{transaction.orderType}</p>
                     <FaLongArrowAltRight className={styles.iconFinal}/>
-                    <p className={styles.dataStylBold}> + {transaction.amountPrice} {transaction.typeCurrency}</p>
+                    <p className={styles.dataStylBold}> + {transaction.amountPrice} {typeCurrency}</p>
                 </div>
             ))}
             <div className={styles.sumWrapper}>
                 <p className={styles.sumTransaction}>Suma wszystkich transakcji:</p>
-                <p className={styles.sumTransaction}>{sumTransaction} €</p>
+                <p className={styles.sumTransaction}>{sumTransaction} {typeCurrency}</p>
             </div>
         </div>
     )

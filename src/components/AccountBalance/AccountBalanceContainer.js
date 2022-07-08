@@ -6,6 +6,7 @@ import { getBalance,
         getYear,
         getMonth,
         changeEarning,
+        getTypeCurrency,
         getEarningType} from "../redux/AccountBalanceRedux";
 
 const mapStateToProps = (state) => ({
@@ -14,7 +15,8 @@ const mapStateToProps = (state) => ({
     week: getWeek(state),
     month: getMonth(state),
     year: getYear(state),
-    earningType: getEarningType(state)
+    earningType: getEarningType(state),
+    typeCurrency: getTypeCurrency(state)
 })
 
 const mapDisptachToProps = dispatch => ({

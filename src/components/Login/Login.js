@@ -20,20 +20,20 @@ const Login = () => {
             <div className={styles.mail}>
                 <p className={styles.titleLogin}>Email</p>
                 <input className={styles.login}
-                onChange={e => setUserMail(e.target.value)}
-                type="email"
-                placeholder="Your Login"
-                >    
+                    onChange={e => setUserMail(e.target.value)}
+                    type="email"
+                    placeholder="Your Login"
+                    >    
                 </input>
             </div>
 
             <div className={styles.mail}>
                 <p className={styles.titleLogin}>Password</p>
                 <input className={styles.login}
-                type="password"
-                onChange={e=> setUserPassword(e.target.value)}
-                placeholder="password"
-                >    
+                    type="password"
+                    onChange={e => setUserPassword(e.target.value)}
+                    placeholder="password"
+                    >    
                 </input>  
             </div>
             <div className={styles.btnWrapper}>

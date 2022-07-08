@@ -14,7 +14,9 @@ const SerwerList = ({allSerwer, addStoreSerwer}) => {
     }, [])
 
     const addNewSerwer = () => {
-        if(serwerIP == '' || serwerIP.length < 11){
+        const regexp = /^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/
+
+        if(regexp.test(serwerIP) === false){
             alert("pole IP jest puste, albo za krótkie ")
         } else {
             let newObj = {
@@ -34,7 +36,6 @@ const SerwerList = ({allSerwer, addStoreSerwer}) => {
                     <input 
                         className={styles.serwerDataForm}
                         type="text"
-                        maxLength="11"
                         placeholder="adres IP 31.10.22.94"
                         value={serwerIP}
                         onChange={e => setSerwerIP(e.target.value)}

@@ -16,7 +16,7 @@ const DevicesList = ({allDevices}) => {
         <div className={styles.devicesWrapper}>
             {allDevices.map((device, index) =>(
                 <div className={styles.device} key={device.id}
-                
+        
                     onClick={(e) => {
                         e.stopPropagation();
                         let arrayMobile = [...showSettings]
@@ -36,7 +36,13 @@ const DevicesList = ({allDevices}) => {
                     </div>
 
                     {
-                        showSettings[index] ?  <div className={styles.settingsWrapper}><MobileSettings device={device} /> </div> : null
+                        showSettings[index] ?
+
+                        <div className={styles.settingsWrapper}>
+                            <MobileSettings device={device} />
+                        </div> 
+
+                        : null
                     }
 
                 </div>
