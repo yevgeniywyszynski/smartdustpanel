@@ -1,0 +1,29 @@
+.withdrawWrapper{
+    background-color: #E4ECF6;
+    padding: 30px;
+    .ballanceWrapper{
+        display: flex;
+        align-items: center;
+        gap:20px;
+        margin-bottom: 20px;
+        .ballanceAvailable{
+            font-size: 45px;
+        }
+    }
+    .applicationForm {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+        .applicationName{
+            width: 50%;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .applicationInput{
+            width: 50%;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    }
+}

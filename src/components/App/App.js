@@ -7,7 +7,7 @@ import Panel from '../Panel/Panel';
 import Settings from '../Settings/Settings';
 import Profile from '../Profile/Profile';
 import MobileView from '../MobileView/MobileViewContainer';
-import WithdrawMoney from '../WithdrawMoney/WithdrawMoney';
+import WithdrawMoney from '../WithdrawMoney/WithdrawMoneyContainer';
 
 function App() {
   return (
