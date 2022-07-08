@@ -7,6 +7,7 @@ import Panel from '../Panel/Panel';
 import Settings from '../Settings/Settings';
 import Profile from '../Profile/Profile';
 import MobileView from '../MobileView/MobileViewContainer';
+import WithdrawMoney from '../WithdrawMoney/WithdrawMoney';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route index element ={<Login />} />
             <Route path="panel" element = {<Panel/>} />
             <Route path="email" element = {<Email />} />
+            <Route path="drawmoney" element = {<WithdrawMoney />} />
             <Route path="panel/settings" element = {<Settings />} />
             <Route path="panel/profile" element = {<Profile />}/>
             <Route path="panel/mobile:id" element = {<MobileView />} />

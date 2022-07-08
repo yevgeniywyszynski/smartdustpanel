@@ -5,10 +5,12 @@ $font-familyRoboto: 'Roboto', sans-serif;
     display: flex;
     gap:20px;
     margin-bottom: 20px;
+    align-items: center;
     .amountType{
         background-color: #fff;
         font-family: $font-familyRoboto;
         border: none;
+        padding: 4px;
     }
     .balanceTitle{
         font-family: $font-familyRoboto;
