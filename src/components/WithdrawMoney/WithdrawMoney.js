@@ -10,7 +10,7 @@ const WithdrawMoney = ({balance, typeCurrency}) => {
     const setMoneyTransaction = () => {
         let transObj = {}
 
-        if(userName == '' || accountBankNumber.length > 26){
+        if(userName == '' || accountBankNumber.length < 26){
             alert('wpisz prawidlowo dane, sprawdz numer konta')
         } else {
             transObj = {

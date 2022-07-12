@@ -14,7 +14,6 @@ function AccountBalance({
 }) {
 
     const [actualityEarning, setActualityEarnig] = useState(day);
-    console.log(typeCurrency)
 
     return (
         <div className={styles.amountWrapper}>
@@ -24,10 +23,6 @@ function AccountBalance({
                 onChange={(e => {
                     changeEarning(e.target.value);
                     setActualityEarnig(e.target.value);
-                    // console.log(e.target.selectedIndex);
-                    // console.log(e.target.options[e.target.selectedIndex]);
-                    
-                    // console.log(e.target.options[e.target.selectedIndex].innerText);
                 })}
             >
                 <option value={day}>day</option>

@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from '../SerwerList/SerwerList.module.scss';
 import { FaCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import DevicesList from "../DevicesList/DevicesListContainer";
 import AddSerwer from "../AddSerwer/AddSerwerContainer";
 
-const SerwerList = ({allSerwer }) => {
-
-    const [showDevices, setShowDevices] = useState([])
-
-    useEffect(() => {
-        let n = allSerwer.length
-        setShowDevices(new Array(n).fill(false))
-    }, [])
+const SerwerList = ({allSerwer, serwerListOpen, showDevicesList}) => {
+    console.log(serwerListOpen)
 
     return(
         <div className={styles.serwerWrapper}>
@@ -19,9 +13,9 @@ const SerwerList = ({allSerwer }) => {
             {allSerwer.map((serwer,index) => (
                 <div key={serwer.id} 
                     onClick={() => {
-                        let temp = [...showDevices]
+                        let temp = [...serwerListOpen]
                         temp[index] = !temp[index]
-                        setShowDevices(temp)
+                        showDevicesList(temp)
                     }}>
 
                     <div className={styles.serwer}>
@@ -33,12 +27,12 @@ const SerwerList = ({allSerwer }) => {
                             type="button"
                             className={styles.btnDevices}
                         >
-                            {showDevices[index] ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
+                            {serwerListOpen[index] ? <FaChevronUp className={styles.iconDevices}/> : <FaChevronDown className={styles.iconDevices} />}
                         </button>
                     </div>
 
                     {
-                        showDevices[index] ? <DevicesList serverIndex={index}/> : null
+                        serwerListOpen[index] ? <DevicesList serverIndex={index}/> : null
                     }
                     
                 </div>
