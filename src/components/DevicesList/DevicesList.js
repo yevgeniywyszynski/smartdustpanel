@@ -4,7 +4,7 @@ import {FaChevronDown, FaChevronUp} from "react-icons/fa";
 import { FaMobile } from 'react-icons/fa';
 import MobileSettings from "../MobileSettings/MobileSettingsContainer";
 
-const DevicesList = ({allDevices}) => {
+const DevicesList = ({allDevices, serverIndex}) => {
     const [showSettings, setShowSettings] = useState([]);
 
     useEffect(() => {

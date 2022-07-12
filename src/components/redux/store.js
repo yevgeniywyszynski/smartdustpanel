@@ -4,7 +4,8 @@ import serwerListRedux from '../redux/SerwerListRedux';
 import devicesListRedux from '../redux/DevicesListRedux';
 import accountBalanceRedux from '../redux/AccountBalanceRedux';
 import contractsRedux from '../redux/ContractsRedux';
-import transactionOptionsRedux from '../redux/TransactionOptionsRedux'
+import transactionOptionsRedux from '../redux/TransactionOptionsRedux';
+import listUIStateRedux from '../redux/ListUIStateRedux';
 import thunk from 'redux-thunk'
 import db from '../../db/db2.json'
 
@@ -17,6 +18,14 @@ const initalState = {
         month: db.accountBalance.month,
         earningType: db.accountBalance.earningType,
     },
+
+    listUIState: {
+        isOpen: false,
+        serwerListOpen: [],
+        deviceListOpen: {
+        }
+    },
+
     serwerList: db.serwerList,
     devicesList: db.devicesList,
     transactionHistory: db.transactionHistory,
@@ -31,6 +40,7 @@ const reducers = {
     accountBalance: accountBalanceRedux,
     contracts: contractsRedux,
     transactionOptions: transactionOptionsRedux,
+    listUIState: listUIStateRedux,
 }
 
 const storeReducer = combineReducers(reducers);

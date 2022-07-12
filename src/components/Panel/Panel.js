@@ -3,7 +3,7 @@ import styles from '../Panel/Panel.module.scss';
 import AccountBalance from '../AccountBalance/AccountBalanceContainer';
 import Navigation from '../Navigation/Navigation';
 import BtnTransactionHistory from '../BtnTransactionHistory/BtnTransactionHistory';
-import BtnSerwerList from '../BtnSerwerList/BtnSerwerList';
+import BtnSerwerList from '../BtnSerwerList/BtnSerwerListContainer';
 
 const Panel = () => {
 

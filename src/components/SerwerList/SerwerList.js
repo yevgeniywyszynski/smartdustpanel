@@ -38,7 +38,7 @@ const SerwerList = ({allSerwer }) => {
                     </div>
 
                     {
-                        showDevices[index] ? <DevicesList /> : null
+                        showDevices[index] ? <DevicesList serverIndex={index}/> : null
                     }
                     
                 </div>
