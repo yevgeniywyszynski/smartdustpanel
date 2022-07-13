@@ -19,7 +19,8 @@ const DevicesList = ({allDevices, serverIndex, devicesListOpen, showMobileSettin
             {allDevices.map((device, index) =>(
                 <div className={styles.device} key={device.id}
         
-                    onClick={() => {
+                    onClick={(e) => {
+                            e.stopPropagation()
                             let arrayMobile = {...devicesListOpen}
                             arrayMobile[serverIndex][index] = !arrayMobile[serverIndex][index]
                             showMobileSettings(arrayMobile)
