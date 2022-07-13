@@ -5,7 +5,6 @@ import DevicesList from "../DevicesList/DevicesListContainer";
 import AddSerwer from "../AddSerwer/AddSerwerContainer";
 
 const SerwerList = ({allSerwer, serwerListOpen, showDevicesList}) => {
-    console.log(serwerListOpen)
 
     return(
         <div className={styles.serwerWrapper}>

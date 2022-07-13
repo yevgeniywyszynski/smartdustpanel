@@ -5,7 +5,9 @@ import {Link} from 'react-router-dom';
 
 const MobileSettings = ({device, removeDevice}) => {
     return(
-        <div className={styles.settingsWrapper}>
+        <div className={styles.settingsWrapper}
+        onClick={(e) => e.stopPropagation()}
+        >
             <button className={styles.btnWifi}>
                 Wifi <FaWifi className={styles.wifiIcon}/>
             </button>

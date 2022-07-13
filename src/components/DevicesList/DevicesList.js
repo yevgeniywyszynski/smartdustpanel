@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect} from "react";
 import styles from '../DevicesList/DevicesList.module.scss';
 import {FaChevronDown, FaChevronUp} from "react-icons/fa";
 import { FaMobile } from 'react-icons/fa';
 import MobileSettings from "../MobileSettings/MobileSettingsContainer";
 
-const DevicesList = ({allDevices, serverIndex}) => {
-    const [showSettings, setShowSettings] = useState([]);
+const DevicesList = ({allDevices, serverIndex, devicesListOpen, showMobileSettings}) => {
 
-    useEffect(() => {
-        let devices = allDevices.length
-        setShowSettings(new Array(devices).fill(false))
+    useEffect(()=>{
+        let temp = {...devicesListOpen}
+            if(!devicesListOpen[serverIndex]) {
+                temp[serverIndex] = new Array(allDevices.length).fill(false)
+                showMobileSettings(temp)
+            }
     }, [])
 
     return(
@@ -17,11 +19,10 @@ const DevicesList = ({allDevices, serverIndex}) => {
             {allDevices.map((device, index) =>(
                 <div className={styles.device} key={device.id}
         
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        let arrayMobile = [...showSettings]
-                        arrayMobile[index] = !arrayMobile[index]
-                        setShowSettings(arrayMobile)
+                    onClick={() => {
+                            let arrayMobile = {...devicesListOpen}
+                            arrayMobile[serverIndex][index] = !arrayMobile[serverIndex][index]
+                            showMobileSettings(arrayMobile)
                     }}>
 
                     <div className={styles.mobileWrapper}>
@@ -31,13 +32,18 @@ const DevicesList = ({allDevices, serverIndex}) => {
                         <button 
                             type="button"
                             className={styles.btnSettings}>
-                            {showSettings[index] ? <FaChevronUp className={styles.emailIcon}/> : <FaChevronDown className={styles.emailIcon} />}
+                            {
+                            (devicesListOpen.serverIndex && devicesListOpen.serverIndex[index])
+                            ?
+                            <FaChevronUp className={styles.emailIcon}/> 
+                            : 
+                            <FaChevronDown className={styles.emailIcon} />
+                            }
                         </button>
                     </div>
 
                     {
-                        showSettings[index] ?
-
+                        (devicesListOpen[serverIndex] && devicesListOpen[serverIndex][index]) ?
                         <div className={styles.settingsWrapper}>
                             <MobileSettings device={device} />
                         </div> 

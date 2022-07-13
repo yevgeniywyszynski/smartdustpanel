@@ -22,7 +22,8 @@ const initalState = {
     listUIState: {
         isOpen: false,
         serwerListOpen: [],
-        deviceListOpen: {
+        devicesListOpen: {
+
         }
     },
 
