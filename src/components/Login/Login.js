@@ -1,45 +1,83 @@
 import React, { useState } from "react";
 import styles from '../Login/Login.module.scss';
-import {Link} from 'react-router-dom';
+import Panel from '../Panel/Panel';
 
 const Login = () => {
 
-    const[emailUser, setUserMail] = useState('')
-    const[passwordUser, setUserPassword] = useState('')
+    const database = [
+        {
+          username: "user1",
+          password: "pass1"
+        },
+        {
+          username: "user2",
+          password: "pass2"
+        },
+        {
+            username: "ywyszyn",
+            password: "dupa"
+        }
+    ];
 
-    // const setUser = () => {
-    //     if(emailUser == '' || passwordUser == ''){
-    //         alert('wpisz swoj mail')
-    //     } else {
+    const errors = {
+        uname: "invalid username",
+        pass: "invalid password"
+    };
+
+    const[errorMessages, setErrorMessages] = useState({})
+    const[isSubmitted, setIsSubmitted] = useState(false)
+
+    const renderErrorMessage = (name) =>
+        name === errorMessages.name 
+        && 
+        (
+        <div className={styles.error}>{errorMessages.message}</div>
+    );
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        
+        let { uname, pass } = document.forms[0];
             
-    //     }
-    // }
+        const userData = database.find((user) => user.username === uname.value);
+
+        if (userData) {
+          if (userData.password !== pass.value) {
+                setErrorMessages({ name: "pass", message: errors.pass });
+          } else {
+                setIsSubmitted(true);
+          }
+        } else {
+            setErrorMessages({ name: "uname", message: errors.uname });
+        }
+      };
+
+      const renderForm = (
+        <div className={styles.form}>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.inputContainer}>
+              <label>Username </label>
+              <input className={styles.inputLog} type="text" name="uname" required />
+              {renderErrorMessage("uname")}
+            </div>
+            <div className={styles.inputContainer}>
+              <label>Password </label>
+              <input className={styles.inputLog} type="password" name="pass" required />
+              {renderErrorMessage("pass")}
+            </div>
+            <div className={styles.buttonContainer}>
+              <input className={styles.submitLog} type="submit" />
+            </div>
+          </form>
+        </div>
+      );
 
     return(
-        <div className={styles.loginsWrapper}>
-            <div className={styles.mail}>
-                <p className={styles.titleLogin}>Email</p>
-                <input className={styles.login}
-                    onChange={e => setUserMail(e.target.value)}
-                    type="email"
-                    placeholder="Your Login"
-                    >    
-                </input>
-            </div>
-
-            <div className={styles.mail}>
-                <p className={styles.titleLogin}>Password</p>
-                <input className={styles.login}
-                    type="password"
-                    onChange={e => setUserPassword(e.target.value)}
-                    placeholder="password"
-                    >    
-                </input>  
-            </div>
-            <div className={styles.btnWrapper}>
-                <Link className={styles.btnLog} to="panel">Log in</Link>
-            </div>
+        <div className={styles.app}>
+        <div className={styles.loginForm}>
+          {isSubmitted ? <Panel />: renderForm}
         </div>
+      </div>
     )
 }
 
