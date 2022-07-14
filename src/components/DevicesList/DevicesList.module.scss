@@ -4,6 +4,28 @@
     border-bottom: 2px solid #000;
     border-right: 2px solid #000;
     border-left: 2px solid #000;
+    padding-top: 10px;
+    .addDeviceWrapper {
+        text-align: end;
+        display: grid;
+        grid-template-columns: 0fr 3fr;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 30px;
+        .btnAddWrapper{
+            text-align: start;
+        }
+    
+        .addDeviceStyle{
+            border: none;
+            background-color: transparent;
+            color: #000;
+            background-color: #87CEFA;
+            text-align: start;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
     .mobileIcon{
         font-size: 35px;
     }

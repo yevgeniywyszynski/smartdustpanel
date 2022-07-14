@@ -1,10 +1,12 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import styles from '../DevicesList/DevicesList.module.scss';
 import {FaChevronDown, FaChevronUp} from "react-icons/fa";
-import { FaMobile } from 'react-icons/fa';
+import { FaMobile, FaMinus, FaPlus } from 'react-icons/fa';
 import MobileSettings from "../MobileSettings/MobileSettingsContainer";
+import AddDevice from "../AddDevice/AddDeviceContainer";
 
 const DevicesList = ({allDevices, serverIndex, devicesListOpen, showMobileSettings}) => {
+    const[showAddDevice, setShowAddDevice] = useState(false)
 
     useEffect(()=>{
         let temp = {...devicesListOpen}
@@ -16,6 +18,22 @@ const DevicesList = ({allDevices, serverIndex, devicesListOpen, showMobileSettin
 
     return(
         <div className={styles.devicesWrapper}>
+            
+            <div className={styles.addDeviceWrapper}>
+                <div className={styles.btnAddWrapper}>
+                    <button 
+                        className={styles.addDeviceStyle}
+                        onClick={() => setShowAddDevice(!showAddDevice)}>
+                        {showAddDevice? <FaMinus /> :<FaPlus />}
+                    </button>
+                </div>
+                <div className={styles.deviceForm}>
+                    {
+                        showAddDevice ? <AddDevice /> : null
+                    }
+                </div>
+            </div>
+
             {allDevices.map((device, index) =>(
                 <div className={styles.device} key={device.id}
         

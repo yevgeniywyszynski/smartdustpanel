@@ -4,20 +4,20 @@ import { FaCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import DevicesList from "../DevicesList/DevicesListContainer";
 import AddSerwer from "../AddSerwer/AddSerwerContainer";
 
+
 const SerwerList = ({allSerwer, serwerListOpen, showDevicesList}) => {
 
     return(
         <div className={styles.serwerWrapper}>
             <AddSerwer />
             {allSerwer.map((serwer,index) => (
-                <div key={serwer.id} 
-                    onClick={() => {
-                        let temp = [...serwerListOpen]
-                        temp[index] = !temp[index]
-                        showDevicesList(temp)
-                    }}>
-
-                    <div className={styles.serwer}>
+                <div key={serwer.id} >
+                    <div className={styles.serwer}
+                        onClick={() => {
+                            let temp = [...serwerListOpen]
+                            temp[index] = !temp[index]
+                            showDevicesList(temp)
+                        }}>
                         <div className={styles.ipWrapper}>
                             <p className={styles.serwerStatus}><FaCircle className={serwer.statusWork !== "active" ? styles.statusIconError : styles.statusIcon} /></p>
                             <p className={styles.serwerIP}>IP: {serwer.serwerIP}</p>
@@ -33,7 +33,7 @@ const SerwerList = ({allSerwer, serwerListOpen, showDevicesList}) => {
                     {
                         serwerListOpen[index] ? <DevicesList serverIndex={index}/> : null
                     }
-                    
+
                 </div>
             ))}
         </div>
