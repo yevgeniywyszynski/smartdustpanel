@@ -19,8 +19,8 @@ function App() {
             <Route path="panel" element = {<Panel/>} />
             <Route path="email" element = {<Email />} />
             <Route path="drawmoney" element = {<WithdrawMoney />} />
-            <Route path="panel/settings" element = {<Settings />} />
-            <Route path="panel/profile" element = {<Profile />}/>
+            <Route path="settings" element = {<Settings />} />
+            <Route path="profile" element = {<Profile />}/>
             <Route path="panel/mobile:id" element = {<MobileView />} />
           </Route>
         </Routes>
