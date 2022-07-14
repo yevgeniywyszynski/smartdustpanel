@@ -38,7 +38,7 @@ const Login = () => {
         event.preventDefault();
         
         let { uname, pass } = document.forms[0];
-            
+          
         const userData = database.find((user) => user.username === uname.value);
 
         if (userData) {
