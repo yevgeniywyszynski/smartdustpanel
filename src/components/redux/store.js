@@ -6,6 +6,7 @@ import accountBalanceRedux from '../redux/AccountBalanceRedux';
 import contractsRedux from '../redux/ContractsRedux';
 import transactionOptionsRedux from '../redux/TransactionOptionsRedux';
 import listUIStateRedux from '../redux/ListUIStateRedux';
+import isSubmittedRedux from '../redux/isSubmittedRedux';
 import thunk from 'redux-thunk'
 import db from '../../db/db2.json'
 
@@ -17,7 +18,7 @@ const initalState = {
         year: db.accountBalance.year,
         month: db.accountBalance.month,
         earningType: db.accountBalance.earningType,
-    },
+    },  // {...statePart, week: 20}
 
     listUIState: {
         isOpen: false,
@@ -27,6 +28,7 @@ const initalState = {
         }
     },
 
+    isSubmitted: false,
     serwerList: db.serwerList,
     devicesList: db.devicesList,
     transactionHistory: db.transactionHistory,
@@ -42,6 +44,7 @@ const reducers = {
     contracts: contractsRedux,
     transactionOptions: transactionOptionsRedux,
     listUIState: listUIStateRedux,
+    isSubmitted: isSubmittedRedux
 }
 
 const storeReducer = combineReducers(reducers);
@@ -49,7 +52,7 @@ const storeReducer = combineReducers(reducers);
 const store = createStore (
     storeReducer,
     initalState,
-    applyMiddleware(thunk),
+    compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 )
 
 export default store;

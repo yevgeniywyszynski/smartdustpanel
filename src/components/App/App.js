@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Email from '../Email/Email';
 import Layout from '../Layout/Layout';
-import Login from '../Login/Login';
+import Login from '../Login/LoginContainer';
 import Panel from '../Panel/Panel';
 import Settings from '../Settings/Settings';
 import Profile from '../Profile/Profile';

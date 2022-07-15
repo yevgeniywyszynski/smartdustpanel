@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from '../Login/Login.module.scss';
 import Panel from '../Panel/Panel';
 
-const Login = () => {
+const Login = ({changeSubmitted, isSubmitted}) => {
 
     const database = [
         {
@@ -25,7 +25,6 @@ const Login = () => {
     };
 
     const[errorMessages, setErrorMessages] = useState({})
-    const[isSubmitted, setIsSubmitted] = useState(false)
 
     const renderErrorMessage = (name) =>
         name === errorMessages.name 
@@ -45,7 +44,7 @@ const Login = () => {
           if (userData.password !== pass.value) {
                 setErrorMessages({ name: "pass", message: errors.pass });
           } else {
-                setIsSubmitted(true);
+                changeSubmitted(true);
           }
         } else {
             setErrorMessages({ name: "uname", message: errors.uname });
