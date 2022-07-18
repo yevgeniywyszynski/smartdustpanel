@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import styles from '../App/App.module.scss'
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Email from '../Email/Email';
 import Layout from '../Layout/Layout';
@@ -12,7 +13,7 @@ import { ReactNotifications } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import {  Store  }  from 'react-notifications-component' ;
 
-function App({inactiveSerwer}) {
+function App({inactiveSerwer, changeIsOpen}) {
 
 
   useEffect(() => {
@@ -23,13 +24,14 @@ function App({inactiveSerwer}) {
 const serwerError = () => {
     Store.addNotification({
         title: "Serwer wymaga uwagi",
-        message: inactiveSerwer.length,
+        message: <button className={styles.btnError} onClick= {() => changeIsOpen(true)}>More</button>,
         type: "danger",
         container: "bottom-right",
         insert: "top",
         dismiss: {
-          duration: 10000
-        }
+          duration: 7000,
+          showIcon: true
+        },
     })
 }
 
@@ -45,8 +47,6 @@ const allWorkClean = () => {
     }
   })
 }
-
-
 
   return (
     <div className="App">

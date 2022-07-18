@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from '../WithdrawMoney/WithdrawMoney.module.scss';
 
-const WithdrawMoney = ({balance, typeCurrency}) => {
+const WithdrawMoney = ({balance, typeCurrency, changeBalance}) => {
 
     const [userName, setUserName] = useState('');
     const [accountBankNumber, setAccountBankNumber] = useState('')
@@ -23,8 +23,14 @@ const WithdrawMoney = ({balance, typeCurrency}) => {
             setUserName('')
             setAccountBankNumber('')
             setTransferAmount('')
+            afterDraw()
         }
     }
+
+    const afterDraw = () => {
+        let drawSum = balance - transferAmount
+        changeBalance(drawSum)
+    }    
 
     return(
         <div className={styles.withdrawWrapper}>

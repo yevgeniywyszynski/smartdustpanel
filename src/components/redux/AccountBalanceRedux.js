@@ -12,10 +12,15 @@ const createActionName = name => `app/${reducerName}/${name}`;
 export const CHANGE_EARNING = createActionName("CHANGE_EARNING")
 export const changeEarning = payload => ({payload, type: CHANGE_EARNING})
 
+export const CHANGE_BALANCE = createActionName("CHANGE_BALANCE");
+export const changeBalance = payload => ({payload, type: CHANGE_BALANCE})
+
 export default function reducer(statePart=[], action={}) {
     switch(action.type) {
         case CHANGE_EARNING:
             return {...statePart, earningType: action.payload}
+        case CHANGE_BALANCE:
+            return {...statePart, balance: action.payload}
         default: 
             return statePart
     }

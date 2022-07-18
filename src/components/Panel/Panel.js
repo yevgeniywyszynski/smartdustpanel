@@ -13,7 +13,7 @@ const Panel = () => {
     useEffect(() => {
         setTimeout(setShowError, 5000, true)
     }, [])
-
+    
     return(
         <div className={styles.panelWrapper}>
             <Navigation />

@@ -1,10 +1,15 @@
 import { connect } from "react-redux";
 import WithdrawMoney from './WithdrawMoney';
-import { getBalance, getTypeCurrency } from "../redux/AccountBalanceRedux";
+import { getBalance, getTypeCurrency, changeBalance } from "../redux/AccountBalanceRedux";
 
 const mapStateToProps = (state) => ({
     balance: getBalance(state),
     typeCurrency: getTypeCurrency(state)
 })
 
-export default connect(mapStateToProps,null)(WithdrawMoney);
+const mapDisptachToProps = dispatch => ({
+    changeBalance: (sum) => dispatch(changeBalance(sum))
+})
+
+
+export default connect(mapStateToProps,mapDisptachToProps)(WithdrawMoney);
