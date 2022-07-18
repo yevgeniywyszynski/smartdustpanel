@@ -43,4 +43,48 @@
             cursor: pointer;
         }
     }
+    .serwerInActive{
+        display: flex;
+        gap: 20px;
+        border-bottom: 2px solid #000;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+        cursor: pointer;
+        background-color: #E9967A;
+        .serwerTitle{
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        .serwerIP{
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+        .statusIcon {
+            color: green;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+        .statusIconError{
+            color: #DC143C;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+        .ipWrapper{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .statusIconError{
+            color: #DC143C;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+        .btnDevices{
+            margin-bottom: 10px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
 }

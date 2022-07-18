@@ -1,4 +1,5 @@
 export const getAllSerwer = ({serwerList}) => serwerList;
+export const getInactiveSerwerList = ({serwerList}) => serwerList.filter((e => e.statusWork == "inactive"))
 
 
 const reducerName = 'serwerList';

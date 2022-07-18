@@ -1,0 +1,40 @@
+.modalWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        height: 30vh;
+        background-color: blanchedalmond;
+        padding: 10px;
+        .btnWrapper {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            .btnExit{
+                padding: 7px 10px;
+                background-color: #DC143C;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+            .btnOpen{
+                padding: 7px 10px;
+                background-color: #2BC1DE;;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

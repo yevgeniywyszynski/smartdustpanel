@@ -12,7 +12,7 @@ const SerwerList = ({allSerwer, serwerListOpen, showDevicesList}) => {
             <AddSerwer />
             {allSerwer.map((serwer,index) => (
                 <div key={serwer.id} >
-                    <div className={styles.serwer}
+                    <div className={serwer.statusWork !== 'active' ? styles.serwerInActive : styles.serwer}
                         onClick={() => {
                             let temp = [...serwerListOpen]
                             temp[index] = !temp[index]
