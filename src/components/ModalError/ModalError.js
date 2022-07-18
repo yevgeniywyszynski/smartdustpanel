@@ -2,7 +2,7 @@ import React from "react"
 import styles from '../ModalError/ModalError.module.scss';
 
 const ModalError = ({setFunc, changeIsOpen, inactiveSerwer}) => {
-    
+        
     return(
         <div className={styles.modalWrapper}>
             <div className={styles.modal}>
