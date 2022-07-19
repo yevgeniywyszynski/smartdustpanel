@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from '../Login/Login.module.scss';
-import Panel from '../Panel/Panel';
+import Panel from '../Panel/PanelContainer';
 
 const Login = ({changeSubmitted, isSubmitted}) => {
 

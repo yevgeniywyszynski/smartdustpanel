@@ -2,8 +2,7 @@ import React from 'react';
 import styles from '../Layout/Layout.module.scss';
 import {Outlet} from 'react-router-dom';
 
-const Layout = () => {
-
+const Layout = ({changeIsOpen}) => {
     return(
         <div className={styles.layoutWrapper}>
             <div className={styles.titleWrapper}>

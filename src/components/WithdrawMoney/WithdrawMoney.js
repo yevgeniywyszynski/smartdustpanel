@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import styles from '../WithdrawMoney/WithdrawMoney.module.scss';
+import { ReactNotifications } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
+import {  Store  }  from 'react-notifications-component' ;
 
 const WithdrawMoney = ({balance, typeCurrency, changeBalance}) => {
 
@@ -34,6 +37,7 @@ const WithdrawMoney = ({balance, typeCurrency, changeBalance}) => {
 
     return(
         <div className={styles.withdrawWrapper}>
+            <ReactNotifications />
             <div className={styles.ballanceWrapper}>
                 <p className={styles.titleBallance}>Dostępne środki</p>
                 <p className={styles.ballanceAvailable}>{balance}{typeCurrency}</p>
