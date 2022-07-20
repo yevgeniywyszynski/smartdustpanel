@@ -9,6 +9,7 @@ import { ReactNotifications } from 'react-notifications-component';
 import {  Store  }  from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import styles from '../Panel/Panel.module.scss';
+// import InstructionDevice from '../InstructionDevice/InsructionDevice';
 
 const Panel = ({changeIsOpen}) => {
 
@@ -31,7 +32,7 @@ const Panel = ({changeIsOpen}) => {
             container: "top-right",
             insert: "top",
             dismiss: {
-              //duration: 7000,
+              duration: 7000,
               showIcon: true
             },
         })

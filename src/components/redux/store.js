@@ -18,7 +18,7 @@ const initalState = {
         year: db.accountBalance.year,
         month: db.accountBalance.month,
         earningType: db.accountBalance.earningType,
-    },  // {...statePart, week: 20}
+    },
 
     listUIState: {
         isOpen: false,
@@ -52,7 +52,7 @@ const storeReducer = combineReducers(reducers);
 const store = createStore (
     storeReducer,
     initalState,
-    compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+    applyMiddleware(thunk),
 )
 
 export default store;

@@ -1,0 +1,23 @@
+.instructionDeviceWrapper{
+    .title{
+        text-align: center;
+        font-size: 30PX;
+    }
+}
+.stepWrapper{
+    margin-top: 20px;
+    .instructionTitle{
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: 400;
+    }
+    .imgWrapper{
+        width: 50%;
+        margin: 0 auto;
+        background-color:azure;
+        .imgStep{
+            width: 100%;
+        }
+    }
+}
