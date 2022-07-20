@@ -1,8 +1,17 @@
+.pageWrapper{
+    margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
 .instructionDeviceWrapper{
-    .title{
-        text-align: center;
-        font-size: 30PX;
-    }
+    height: 80%;
+    width: 80%;
+    margin: auto;
 }
 .stepWrapper{
     margin-top: 20px;
@@ -16,8 +25,23 @@
         width: 50%;
         margin: 0 auto;
         background-color:azure;
+        padding: 20px;
         .imgStep{
             width: 100%;
+            background-size: cover;
         }
+    }
+}
+
+.btnCloseWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btnClose{
+        background-color: #B22222;
+        color: #fff;
+        border: none;
+        padding: 5px 20px;
+        cursor: pointer;
     }
 }

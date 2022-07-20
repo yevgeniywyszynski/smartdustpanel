@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from '../AddSerwer/AddSerwer.module.scss';
 
-const AddSerwer = ({addStoreSerwer}) => {
+const AddSerwer = ({addStoreSerwer, setFunc}) => {
     const[serwerIP, setSerwerIP] = useState('')
 
     const addNewSerwer = () => {
@@ -19,7 +19,6 @@ const AddSerwer = ({addStoreSerwer}) => {
             setSerwerIP('')
         }
     }
-
     return(
         <div className={styles.addWrapper}>
             <div className={styles.dataSerwer}>
@@ -37,6 +36,12 @@ const AddSerwer = ({addStoreSerwer}) => {
                 onClick={addNewSerwer}
                 >
                 Doddaj serwer
+            </button>
+            <button 
+                className={styles.btnAddSerwer} type="button"
+                onClick={() => setFunc(true)}
+                >
+                Dodaj Urządzenie
             </button>
         </div>
     )
