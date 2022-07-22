@@ -6,42 +6,57 @@
     height: 100%;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
-}
-
-.instructionDeviceWrapper{
-    height: 80%;
-    width: 80%;
-    margin: auto;
-}
-.stepWrapper{
-    margin-top: 20px;
-    .instructionTitle{
-        font-size: 20px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        font-weight: 400;
+    .instructionDeviceWrapper{
+        height: 80%;
+        width: 80%;
+        margin: auto;
     }
-    .imgWrapper{
-        width: 50%;
-        margin: 0 auto;
-        background-color:azure;
-        padding: 20px;
-        .imgStep{
-            width: 100%;
-            background-size: cover;
+    .stepWrapper{
+        margin-top: 20px;
+        .imgWrapper{
+            width: 50%;
+            margin: 0 auto;
+            background-color:azure;
+            padding: 20px;
+            .btnCloseWrapper{
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                .btnClose{
+                    background-color: transparent;
+                    color: #B22222;
+                    border: none;
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    font-size: 20px;
+                }
+            }
+            .imgStep{
+                width: 100%;
+                background-size: cover;
+            }
+            .instructionTitle{
+                font-size: 20px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-weight: 400;
+            }
         }
     }
 }
 
-.btnCloseWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .btnClose{
-        background-color: #B22222;
+/*slider style*/
+.stepNumbers{
+    li{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .stepContainer{
+        width: 30px;
         color: #fff;
-        border: none;
-        padding: 5px 20px;
-        cursor: pointer;
+        border: 1px solid #fff;
+        background-color: #5E3D97;
+        border-radius: 50px;
+        margin-right: 10px;
     }
 }

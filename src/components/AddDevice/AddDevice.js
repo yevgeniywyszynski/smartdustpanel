@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from '../AddDevice/AddDevice.module.scss';
+import styles from './AddDevice.module.scss';
 
 const AddDevice = ({addStoreDevice}) => {
 

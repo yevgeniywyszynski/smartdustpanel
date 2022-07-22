@@ -2,17 +2,21 @@ import React, {useState} from "react";
 import styles from '../SerwerList/SerwerList.module.scss';
 import { FaCircle, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import DevicesList from "../DevicesList/DevicesListContainer";
-import AddSerwer from "../AddSerwer/AddSerwerContainer";
+import AddButtons from "../AddButtons/AddButtons";
 import InstructionDevice from '../InstructionDevice/InsructionDevice';
+import InstructionSerwer from "../InstructionSerwer/InstructionSerwer";
 
 const SerwerList = ({allSerwer, serwerListOpen, showDevicesList}) => {
     const[showInstruction, setShowInstruction] = useState(false)
+    const[showSerwerInstruction, setShowSerwerInstruction] = useState(false)
 
     return(
         <div className={styles.serwerWrapper}>
-            <AddSerwer setFunc = {setShowInstruction} />
+            <AddButtons setFunc = {setShowInstruction} setShowSerwerInstruction = {setShowSerwerInstruction} />
 
             {showInstruction ? <InstructionDevice setFunc={setShowInstruction} /> : null}
+            {showSerwerInstruction ? <InstructionSerwer setShowSerwerInstruction = {setShowSerwerInstruction}/> : null}
+
             {allSerwer.map((serwer,index) => (
                 <div key={serwer.id} >
                     <div className={serwer.statusWork !== 'active' ? styles.serwerInActive : styles.serwer}

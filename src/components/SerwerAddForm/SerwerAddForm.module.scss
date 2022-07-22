@@ -1,0 +1,17 @@
+.dataSerwer{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    .serwerDataForm{
+        padding: 7px 20px;
+        font-size: 15px;
+        border: 1px solid #000;
+    }
+    .btnAddSerwer{
+        background-color: #5E3D97;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 8px 20px;
+    }
+}

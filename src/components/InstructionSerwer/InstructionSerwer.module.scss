@@ -1,0 +1,83 @@
+.pageWrapper{
+    margin-bottom: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    .instructionSerwerWrapper{
+        height: 80%;
+        width: 80%;
+        margin: auto;
+        .stepWrapper{
+            margin-top: 20px;
+            .imgWrapper{
+                width: 50%;
+                margin: 0 auto;
+                background-color:azure;
+                padding: 20px;
+                .btnCloseWrapper{
+                    display: flex;
+                    justify-content: end;
+                    .btnClose{
+                        background-color: transparent;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        color: red;
+                        border: none;
+                        font-size: 18px;
+                        cursor: pointer;
+                    }
+                }
+                .imgStep{
+                    width: 100%;
+                    background-size: cover;
+                }
+                .titleStep{
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    font-size: 25px;
+                    font-weight: 400;
+                }
+                .btnAnswerWrapper{
+                    margin-bottom: 10px;
+                    display: flex;
+                    gap: 20px;
+                    .btnYes{
+                        padding: 5px 20px;
+                        background-color: #008000;
+                        border: none;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                    .btnNo{
+                        padding: 5px 20px;
+                        background-color: red;
+                        border: none;
+                        color: #fff;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*slider style*/
+.stepNumbers{
+    li{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .stepContainer{
+        width: 30px;
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: #5E3D97;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+}
