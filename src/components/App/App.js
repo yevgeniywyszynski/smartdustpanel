@@ -6,7 +6,7 @@ import Layout from '../Layout/Layout';
 import Login from '../Login/LoginContainer';
 import Panel from '../Panel/PanelContainer';
 import Settings from '../Settings/Settings';
-import Profile from '../Profile/Profile';
+import Profile from '../Profile/ProfileContainer';
 import MobileView from '../MobileView/MobileViewContainer';
 import WithdrawMoney from '../WithdrawMoney/WithdrawMoneyContainer';
 

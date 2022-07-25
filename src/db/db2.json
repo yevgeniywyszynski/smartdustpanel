@@ -39,8 +39,11 @@
         "year": 450,
         "month" : 100,
         "earningType": "day",
-        "typeCurrency": "€"
-    },
+        "typeCurrency": "€",
+        "name": "Jan",
+        "surname": "Kowalski",
+        "accountBankNumber": "49102028922276300500000000"
+    },                       
 
     "transactionOptions": {
         "typeCurrency": "€"

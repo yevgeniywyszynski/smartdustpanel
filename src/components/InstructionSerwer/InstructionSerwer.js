@@ -5,9 +5,8 @@ import { FaWindowClose } from 'react-icons/fa';
 import SerwerAddForm from "../SerwerAddForm/SerwerAddFormContainer";
 
 const InstructionSerwer = ({setShowSerwerInstruction}) => {
-  const[serwerAddForm, setShowSerwerAddForm] = useState(false)
+  const [serwerAddForm, setShowSerwerAddForm] = useState(false)
   const [noAnswer, setNoAnswer] = useState(false)
-  const[yesAnswer, setYesAnswer] = useState(false)
 
     const settings = {
         dots: true,
@@ -54,10 +53,8 @@ const InstructionSerwer = ({setShowSerwerInstruction}) => {
                   <button 
                     className={styles.btnYes}
                     onClick={() => {
-                      if(!noAnswer){
-                        setShowSerwerAddForm(true)
-                        setYesAnswer(true)
-                      }
+                      setShowSerwerAddForm(true)
+                      setNoAnswer(false)
                     }}
                     >
                       Mam
@@ -65,14 +62,14 @@ const InstructionSerwer = ({setShowSerwerInstruction}) => {
                   <button 
                     className={styles.btnNo}
                     onClick={() => {
-                      if(!yesAnswer)
+                      setShowSerwerAddForm(false)
                       setNoAnswer(true)
                     }}
                     >
                       Nie Mam
                   </button>
-
                 </div>
+
                 {noAnswer ? <p>przejdz dalej</p> : null}
                 {serwerAddForm ? <SerwerAddForm setShowSerwerInstruction = {setShowSerwerInstruction}/> : null}
 

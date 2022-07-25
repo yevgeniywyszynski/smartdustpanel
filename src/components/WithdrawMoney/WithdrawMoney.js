@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import styles from '../WithdrawMoney/WithdrawMoney.module.scss';
 import { ReactNotifications } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
-import {  Store  }  from 'react-notifications-component' ;
 
-const WithdrawMoney = ({balance, typeCurrency, changeBalance}) => {
+const WithdrawMoney = ({name, surname, accountBankNumber, balance, typeCurrency, changeBalance}) => {
 
-    const [userName, setUserName] = useState('');
-    const [accountBankNumber, setAccountBankNumber] = useState('')
+    const [userName, setUserName] = useState(`${name} ${surname}`);
     const [transferAmount, setTransferAmount] = useState('')
 
     const setMoneyTransaction = () => {
@@ -24,7 +22,6 @@ const WithdrawMoney = ({balance, typeCurrency, changeBalance}) => {
             console.log(transObj)
             alert('twoj wniosek zostal wyslany')
             setUserName('')
-            setAccountBankNumber('')
             setTransferAmount('')
             afterDraw()
         }
@@ -46,7 +43,7 @@ const WithdrawMoney = ({balance, typeCurrency, changeBalance}) => {
                 <input className={styles.applicationName}
                     type="text"
                     placeholder="Imię Nazwisko"
-                    value={userName}
+                    defaultValue={userName}
                     onChange={(e) => setUserName(e.target.value)}
                 >
                 </input>
@@ -54,8 +51,8 @@ const WithdrawMoney = ({balance, typeCurrency, changeBalance}) => {
                     placeholder="Numer Konta"
                     type="number"
                     min="0"
-                    value={accountBankNumber}
-                    onChange={(e) => setAccountBankNumber(e.target.value)}
+                    defaultValue={accountBankNumber}
+
                 >
                 </input>
                 <input className={styles.applicationInput}

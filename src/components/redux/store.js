@@ -18,6 +18,9 @@ const initalState = {
         year: db.accountBalance.year,
         month: db.accountBalance.month,
         earningType: db.accountBalance.earningType,
+        name: db.accountBalance.name,
+        surname: db.accountBalance.surname,
+        accountBankNumber: db.accountBalance.accountBankNumber
     },
 
     listUIState: {
