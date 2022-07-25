@@ -7,7 +7,7 @@ const WithdrawMoney = ({name, surname, accountBankNumber, balance, typeCurrency,
 
     const [userName, setUserName] = useState(`${name} ${surname}`);
     const [transferAmount, setTransferAmount] = useState('')
-
+    
     const setMoneyTransaction = () => {
         let transObj = {}
 
@@ -30,7 +30,15 @@ const WithdrawMoney = ({name, surname, accountBankNumber, balance, typeCurrency,
     const afterDraw = () => {
         let drawSum = balance - transferAmount
         changeBalance(drawSum)
-    }    
+    }
+
+    const checkTransferAmount = (value) => {
+        if(value > balance){
+            alert('nie masz tyle na koncie')
+        } else {
+            setTransferAmount(value)
+        }
+    }
 
     return(
         <div className={styles.withdrawWrapper}>
@@ -60,11 +68,20 @@ const WithdrawMoney = ({name, surname, accountBankNumber, balance, typeCurrency,
                     type="number"
                     min="0" 
                     step="1"
-                    max="10000"
+                    max={balance}
                     value={transferAmount}
-                    onChange={(e) => setTransferAmount(e.target.value)}
+                    onChange={(e) => checkTransferAmount(e.target.value)}
                 >
                 </input>
+                <input
+                    className={styles.applicationInput}
+                    type="range"
+                    min="0"
+                    step="1"
+                    max={balance}
+                    value={transferAmount}
+                onChange={(e) => setTransferAmount(e.target.value)} 
+            />
             </div>
             <button type="button" 
                 className={styles.btnSendForm}
