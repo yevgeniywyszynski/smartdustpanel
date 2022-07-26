@@ -3,10 +3,10 @@ import styles from '../WithdrawMoney/WithdrawMoney.module.scss';
 import { ReactNotifications } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 
-const WithdrawMoney = ({name, surname, accountBankNumber, balance, typeCurrency, changeBalance}) => {
+const WithdrawMoney = ({name, surname, accountBankNumber, balance, typeCurrency, changeBalance, addTransaction}) => {
 
     const [userName, setUserName] = useState(`${name} ${surname}`);
-    const [transferAmount, setTransferAmount] = useState('')
+    const [transferAmount, setTransferAmount] = useState(0)
     
     const setMoneyTransaction = () => {
         let transObj = {}
@@ -15,11 +15,15 @@ const WithdrawMoney = ({name, surname, accountBankNumber, balance, typeCurrency,
             alert('wpisz prawidlowo dane, sprawdz numer konta')
         } else {
             transObj = {
+                id: 1111,
+                data: "2020-01-02",
+                orderType: "wyplata",
                 userName: userName,
                 accountBankNumber: accountBankNumber,
-                transferAmount: transferAmount
+                amountPrice: Number(transferAmount),
+                typeCurrency: "€"
             }
-            console.log(transObj)
+            addTransaction(transObj)
             alert('twoj wniosek zostal wyslany')
             setUserName('')
             setTransferAmount('')

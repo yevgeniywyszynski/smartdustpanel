@@ -33,7 +33,7 @@
     ],
 
     "accountBalance": {
-        "balance": 200,
+        "balance": 510,
         "week": 75,
         "day": 10,
         "year": 450,
@@ -80,6 +80,13 @@
             "data": "2022-06-15",
             "orderType": "new serwer",
             "amountPrice": 50
+        },
+        {
+            "id": 133,
+            "data": "2020-01-02",
+            "orderType": "new phone",
+            "amountPrice": 120,
+            "typeCurrency": "€"
         }
     ],
 

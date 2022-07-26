@@ -14,14 +14,14 @@ const Panel = ({changeIsOpen}) => {
 
     const[showError, setShowError] = useState(false)
     
-    useEffect(() => {
-        setTimeout(setShowError, 5000, true)
-    }, [])
+    // useEffect(() => {
+    //     setTimeout(setShowError, 5000, true)
+    // }, [])
 
-    useEffect(() => {
-        setTimeout(serwerError, 10000)
-        setTimeout(allWorkClean, 3000)
-    }, [])
+    // useEffect(() => {
+    //     setTimeout(serwerError, 10000)
+    //     setTimeout(allWorkClean, 3000)
+    // }, [])
 
     const serwerError = () => {
         Store.addNotification({
@@ -55,6 +55,24 @@ const Panel = ({changeIsOpen}) => {
         
         <div className="container">
             <ReactNotifications className={styles.error} />
+        </div>
+
+        <div className={styles.btnTestWrapper}>
+            <button className={styles.cleanOk}
+                onClick={allWorkClean}
+                >
+                All work clean
+            </button>
+            <button className={styles.errorNotification}
+                onClick={serwerError}
+                >
+                Serwer error
+            </button>
+            <button className={styles.errorNotification}
+                onClick={() => setShowError(true)}
+                >
+                Window Serwer
+            </button>
         </div>
 
         <div className={styles.panelWrapper}>

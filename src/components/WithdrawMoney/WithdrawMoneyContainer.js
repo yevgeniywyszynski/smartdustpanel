@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import WithdrawMoney from './WithdrawMoney';
 import { getBalance, getTypeCurrency, changeBalance, getName, getSurname, getAccountBankNumber } from "../redux/AccountBalanceRedux";
+import { addTransaction } from "../redux/TransactionHistoryRedux";
 
 const mapStateToProps = (state) => ({
     balance: getBalance(state),
@@ -11,7 +12,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDisptachToProps = dispatch => ({
-    changeBalance: (sum) => dispatch(changeBalance(sum))
+    changeBalance: (sum) => dispatch(changeBalance(sum)),
+    addTransaction: (transObj) => dispatch(addTransaction(transObj))
 })
 
 

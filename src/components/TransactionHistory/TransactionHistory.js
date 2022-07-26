@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../TransactionHistory/TransactionHistory.module.scss';
-import {FaLongArrowAltRight } from "react-icons/fa";
+import {FaLongArrowAltRight, FaLongArrowAltLeft} from "react-icons/fa";
 
 const TransactionHistory = ({allTransaction, typeCurrency}) => {
 
@@ -10,10 +10,15 @@ const TransactionHistory = ({allTransaction, typeCurrency}) => {
         setSumTransaction(sumHistory())
     },[])
 
+
     const sumHistory = () => {
         let sum = 0
         for(let i of allTransaction){
-            sum = sum + i.amountPrice
+            if(i.orderType == "wyplata"){
+                sum = sum - i.amountPrice
+            } else {
+                sum = sum + i.amountPrice
+            }
         }
         return sum
     }
@@ -30,8 +35,15 @@ const TransactionHistory = ({allTransaction, typeCurrency}) => {
                 <div className={styles.historyWrapper} key={transaction.id}>
                     <p className={styles.dataStyl}>{transaction.data}</p>
                     <p className={styles.dataStyl}>{transaction.orderType}</p>
-                    <FaLongArrowAltRight className={styles.iconFinal}/>
-                    <p className={styles.dataStylBold}> + {transaction.amountPrice} {typeCurrency}</p>
+                    {transaction.orderType == "wyplata" 
+                    ? 
+                    <FaLongArrowAltLeft className={styles.iconFinal}/> 
+                    : <FaLongArrowAltRight className={styles.iconFinal}/> }
+
+                    <p className={styles.dataStylBold}>
+                        {transaction.orderType == "wyplata" ? "-" : "+"}
+                        {transaction.amountPrice} {typeCurrency}
+                    </p>
                 </div>
             ))}
             <div className={styles.sumWrapper}>
