@@ -12,7 +12,6 @@ import WithdrawMoney from '../WithdrawMoney/WithdrawMoneyContainer';
 
 import GoogleLogin from 'react-google-login';
 import { gapi } from "gapi-script";
-//const socket = io();
 
 function App({inactiveSerwer, changeIsOpen}) {
 
